@@ -1,0 +1,210 @@
+[
+  {
+    "id": "p001",
+    "topic": "arrays",
+    "difficulty": "easy",
+    "title": "Two Sum",
+    "statement": "Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.",
+    "leetcode_url": "https://leetcode.com/problems/two-sum/",
+    "hints": [
+      "Think about what you'd need to know about previous numbers as you iterate.",
+      "A hash map can store value -> index as you go.",
+      "For each number, check if target - num exists in the map already."
+    ]
+  },
+  {
+    "id": "p002",
+    "topic": "arrays",
+    "difficulty": "medium",
+    "title": "Product of Array Except Self",
+    "statement": "Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i], without using division.",
+    "leetcode_url": "https://leetcode.com/problems/product-of-array-except-self/",
+    "hints": [
+      "Think about prefix and suffix products.",
+      "Compute prefix products left-to-right in one pass.",
+      "Then multiply by suffix products right-to-left in a second pass."
+    ]
+  },
+  {
+    "id": "p003",
+    "topic": "arrays",
+    "difficulty": "hard",
+    "title": "Trapping Rain Water",
+    "statement": "Given n non-negative integers representing an elevation map, compute how much water it can trap after raining.",
+    "leetcode_url": "https://leetcode.com/problems/trapping-rain-water/",
+    "hints": [
+      "Water trapped at index i depends on the max height to its left and right.",
+      "Try precomputing left-max and right-max arrays.",
+      "A two-pointer approach can do this in O(n) with O(1) extra space."
+    ]
+  },
+  {
+    "id": "p004",
+    "topic": "strings",
+    "difficulty": "easy",
+    "title": "Valid Anagram",
+    "statement": "Given two strings s and t, return true if t is an anagram of s, and false otherwise.",
+    "leetcode_url": "https://leetcode.com/problems/valid-anagram/",
+    "hints": [
+      "Think about character frequency counts.",
+      "Sort both strings and compare, or use a frequency map.",
+      "Counter/dict comparison is the simplest O(n) approach."
+    ]
+  },
+  {
+    "id": "p005",
+    "topic": "strings",
+    "difficulty": "medium",
+    "title": "Longest Substring Without Repeating Characters",
+    "statement": "Given a string s, find the length of the longest substring without repeating characters.",
+    "leetcode_url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+    "hints": [
+      "Think sliding window.",
+      "Use a set to track characters currently in the window.",
+      "When you hit a duplicate, shrink the window from the left until it's gone."
+    ]
+  },
+  {
+    "id": "p006",
+    "topic": "strings",
+    "difficulty": "medium",
+    "title": "Group Anagrams",
+    "statement": "Given an array of strings strs, group the anagrams together.",
+    "leetcode_url": "https://leetcode.com/problems/group-anagrams/",
+    "hints": [
+      "Anagrams share the same sorted character sequence.",
+      "Use the sorted string (or character count tuple) as a hash map key.",
+      "Group all original strings under their canonical key."
+    ]
+  },
+  {
+    "id": "p007",
+    "topic": "trees",
+    "difficulty": "easy",
+    "title": "Invert Binary Tree",
+    "statement": "Given the root of a binary tree, invert the tree, and return its root.",
+    "leetcode_url": "https://leetcode.com/problems/invert-binary-tree/",
+    "hints": [
+      "Think recursively: invert the subtrees first.",
+      "At each node, swap the left and right children.",
+      "A simple recursive function handles this in a few lines."
+    ]
+  },
+  {
+    "id": "p008",
+    "topic": "trees",
+    "difficulty": "medium",
+    "title": "Validate Binary Search Tree",
+    "statement": "Given the root of a binary tree, determine if it is a valid binary search tree (BST).",
+    "leetcode_url": "https://leetcode.com/problems/validate-binary-search-tree/",
+    "hints": [
+      "A node's value must fall within a valid (low, high) range from its ancestors.",
+      "Pass down updated bounds recursively.",
+      "In-order traversal of a valid BST should be strictly increasing."
+    ]
+  },
+  {
+    "id": "p009",
+    "topic": "trees",
+    "difficulty": "medium",
+    "title": "Binary Tree Level Order Traversal",
+    "statement": "Given the root of a binary tree, return the level order traversal of its nodes' values (left to right, level by level).",
+    "leetcode_url": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+    "hints": [
+      "BFS using a queue is the natural fit.",
+      "Process one full level at a time by tracking the queue size at the start of each level.",
+      "Append a new list for each level's values."
+    ]
+  },
+  {
+    "id": "p010",
+    "topic": "trees",
+    "difficulty": "hard",
+    "title": "Serialize and Deserialize Binary Tree",
+    "statement": "Design an algorithm to serialize and deserialize a binary tree to/from a string.",
+    "leetcode_url": "https://leetcode.com/problems/serialize-and-deserialize-binary-tree/",
+    "hints": [
+      "Pre-order traversal works well for serialization.",
+      "Use a marker (e.g. 'null') for missing children.",
+      "Deserialize recursively, consuming tokens from the front of the list."
+    ]
+  },
+  {
+    "id": "p011",
+    "topic": "graphs",
+    "difficulty": "medium",
+    "title": "Number of Islands",
+    "statement": "Given an m x n 2D binary grid which represents a map of '1's (land) and '0's (water), return the number of islands.",
+    "leetcode_url": "https://leetcode.com/problems/number-of-islands/",
+    "hints": [
+      "Think of each land cell as a graph node connected to adjacent land cells.",
+      "DFS or BFS from each unvisited '1' to mark its whole island as visited.",
+      "Count how many times you start a new traversal."
+    ]
+  },
+  {
+    "id": "p012",
+    "topic": "graphs",
+    "difficulty": "medium",
+    "title": "Course Schedule II",
+    "statement": "Given numCourses and a list of prerequisite pairs, return the ordering of courses you should take to finish all courses, or an empty array if impossible.",
+    "leetcode_url": "https://leetcode.com/problems/course-schedule-ii/",
+    "hints": [
+      "Think about representing this as a graph problem.",
+      "What traversal handles dependency ordering?",
+      "Topological sort via BFS (Kahn's algorithm) or DFS works well."
+    ]
+  },
+  {
+    "id": "p013",
+    "topic": "graphs",
+    "difficulty": "hard",
+    "title": "Word Ladder",
+    "statement": "Given two words and a dictionary, return the length of the shortest transformation sequence from beginWord to endWord, changing one letter at a time.",
+    "leetcode_url": "https://leetcode.com/problems/word-ladder/",
+    "hints": [
+      "Model each word as a graph node, edges connect words differing by one letter.",
+      "BFS finds shortest paths in unweighted graphs.",
+      "Generate neighbors by changing each letter position to a-z and checking the dictionary."
+    ]
+  },
+  {
+    "id": "p014",
+    "topic": "dp",
+    "difficulty": "easy",
+    "title": "Climbing Stairs",
+    "statement": "You are climbing a staircase that takes n steps. Each time you can climb 1 or 2 steps. Return the number of distinct ways to climb to the top.",
+    "leetcode_url": "https://leetcode.com/problems/climbing-stairs/",
+    "hints": [
+      "This is just Fibonacci in disguise.",
+      "ways(n) = ways(n-1) + ways(n-2).",
+      "Use two variables to track the last two values instead of recursion."
+    ]
+  },
+  {
+    "id": "p015",
+    "topic": "dp",
+    "difficulty": "medium",
+    "title": "Coin Change",
+    "statement": "Given coins of different denominations and a total amount, return the fewest number of coins needed to make up that amount, or -1 if impossible.",
+    "leetcode_url": "https://leetcode.com/problems/coin-change/",
+    "hints": [
+      "Build a dp array where dp[i] = min coins to make amount i.",
+      "dp[0] = 0; for each amount, try every coin.",
+      "dp[i] = min(dp[i], dp[i - coin] + 1) for each coin <= i."
+    ]
+  },
+  {
+    "id": "p016",
+    "topic": "dp",
+    "difficulty": "hard",
+    "title": "Longest Increasing Subsequence",
+    "statement": "Given an integer array nums, return the length of the longest strictly increasing subsequence.",
+    "leetcode_url": "https://leetcode.com/problems/longest-increasing-subsequence/",
+    "hints": [
+      "dp[i] = length of the LIS ending at index i.",
+      "For each i, check all j < i where nums[j] < nums[i].",
+      "For O(n log n), maintain a sorted 'tails' array and binary search for insertion point."
+    ]
+  }
+]
