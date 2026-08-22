@@ -13,7 +13,7 @@ import time
 
 def main():
     print("=" * 65)
-    print("  🚀 Starting Placement Mentor 2.0 (Backend & Frontend)  ")
+    print("  Starting Placement Mentor 2.0 (Backend & Frontend)  ")
     print("=" * 65)
 
     base_dir = os.path.dirname(os.path.abspath(__file__))
@@ -50,9 +50,9 @@ def main():
         )
 
     print("\n" + "=" * 65)
-    print("  ✅ All Services Active:")
-    print("  👉 Web App:  http://localhost:3000")
-    print("  👉 API Docs: http://localhost:4000/docs")
+    print("  All Services Active:")
+    print("  Web App:  http://localhost:3000")
+    print("  API Docs: http://localhost:4000/docs")
     print("=" * 65)
     print("Press Ctrl+C in this terminal to stop all services.\n")
 
