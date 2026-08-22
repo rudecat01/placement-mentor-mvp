@@ -1,0 +1,9 @@
+[tool.pyrefly]
+# Root search path — run uvicorn from server/, so server/ IS the root
+search_path = [".", "D:/Anaconda3/Lib/site-packages"]
+
+# Suppress missing stubs for third-party packages that lack py.typed markers
+ignore_missing_imports = true
+
+# Python interpreter on this workstation
+python_interpreter = "D:/Anaconda3/python.exe"

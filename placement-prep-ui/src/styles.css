@@ -1,0 +1,276 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Placement Mentor design system.
+ * Light-first. Warm neutral canvas, white surfaces, one rust accent.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 3px);
+  --radius-md: calc(var(--radius) - 1px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 3px);
+  --radius-2xl: calc(var(--radius) + 7px);
+
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-warning-soft: var(--warning-soft);
+  --color-danger: var(--danger);
+  --color-danger-foreground: var(--danger-foreground);
+  --color-danger-soft: var(--danger-soft);
+  --color-info: var(--info);
+  --color-info-soft: var(--info-soft);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --shadow-subtle: 0 1px 2px oklch(0.2 0.02 60 / 0.05);
+  --shadow-raised: 0 1px 3px oklch(0.2 0.02 60 / 0.06), 0 8px 24px -12px oklch(0.2 0.02 60 / 0.12);
+  --shadow-overlay: 0 16px 48px -16px oklch(0.2 0.02 60 / 0.22);
+}
+
+:root {
+  --radius: 0.5rem;
+
+  --background: oklch(0.985 0.004 85);
+  --foreground: oklch(0.205 0.008 60);
+  --surface: oklch(1 0 0);
+  --surface-muted: oklch(0.972 0.005 85);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.205 0.008 60);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.205 0.008 60);
+
+  --primary: oklch(0.52 0.15 35);
+  --primary-foreground: oklch(0.99 0.005 85);
+  --primary-soft: oklch(0.955 0.025 45);
+
+  --secondary: oklch(0.965 0.005 85);
+  --secondary-foreground: oklch(0.28 0.01 60);
+
+  --muted: oklch(0.966 0.005 85);
+  --muted-foreground: oklch(0.53 0.012 65);
+
+  --accent: oklch(0.955 0.008 85);
+  --accent-foreground: oklch(0.25 0.01 60);
+
+  --destructive: oklch(0.52 0.19 27);
+  --destructive-foreground: oklch(0.99 0.005 85);
+
+  --success: oklch(0.52 0.11 155);
+  --success-foreground: oklch(0.99 0.005 85);
+  --success-soft: oklch(0.955 0.03 155);
+  --warning: oklch(0.62 0.13 75);
+  --warning-foreground: oklch(0.2 0.02 75);
+  --warning-soft: oklch(0.965 0.045 85);
+  --danger: oklch(0.52 0.19 27);
+  --danger-foreground: oklch(0.99 0.005 85);
+  --danger-soft: oklch(0.96 0.03 25);
+  --info: oklch(0.5 0.09 240);
+  --info-soft: oklch(0.96 0.02 240);
+
+  --border: oklch(0.915 0.006 80);
+  --border-strong: oklch(0.855 0.008 80);
+  --input: oklch(0.9 0.006 80);
+  --ring: oklch(0.52 0.15 35);
+
+  --chart-1: oklch(0.52 0.15 35);
+  --chart-2: oklch(0.52 0.11 155);
+  --chart-3: oklch(0.5 0.09 240);
+  --chart-4: oklch(0.68 0.13 75);
+  --chart-5: oklch(0.45 0.05 60);
+
+  --sidebar: oklch(0.978 0.005 85);
+  --sidebar-foreground: oklch(0.28 0.01 60);
+  --sidebar-primary: oklch(0.52 0.15 35);
+  --sidebar-primary-foreground: oklch(0.99 0.005 85);
+  --sidebar-accent: oklch(0.945 0.008 85);
+  --sidebar-accent-foreground: oklch(0.22 0.01 60);
+  --sidebar-border: oklch(0.915 0.006 80);
+  --sidebar-ring: oklch(0.52 0.15 35);
+}
+
+.dark {
+  --background: oklch(0.185 0.006 70);
+  --foreground: oklch(0.95 0.005 85);
+  --surface: oklch(0.225 0.007 70);
+  --surface-muted: oklch(0.245 0.007 70);
+  --card: oklch(0.225 0.007 70);
+  --card-foreground: oklch(0.95 0.005 85);
+  --popover: oklch(0.235 0.007 70);
+  --popover-foreground: oklch(0.95 0.005 85);
+  --primary: oklch(0.68 0.15 40);
+  --primary-foreground: oklch(0.18 0.01 60);
+  --primary-soft: oklch(0.3 0.05 40);
+  --secondary: oklch(0.27 0.008 70);
+  --secondary-foreground: oklch(0.94 0.005 85);
+  --muted: oklch(0.27 0.008 70);
+  --muted-foreground: oklch(0.7 0.01 75);
+  --accent: oklch(0.29 0.008 70);
+  --accent-foreground: oklch(0.95 0.005 85);
+  --destructive: oklch(0.62 0.18 27);
+  --destructive-foreground: oklch(0.98 0.005 85);
+  --success: oklch(0.66 0.12 155);
+  --success-soft: oklch(0.3 0.05 155);
+  --warning: oklch(0.75 0.13 80);
+  --warning-soft: oklch(0.32 0.05 80);
+  --danger: oklch(0.64 0.18 27);
+  --danger-soft: oklch(0.3 0.06 25);
+  --info: oklch(0.68 0.1 240);
+  --info-soft: oklch(0.29 0.04 240);
+  --border: oklch(1 0 0 / 11%);
+  --border-strong: oklch(1 0 0 / 18%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.68 0.15 40);
+  --sidebar: oklch(0.205 0.006 70);
+  --sidebar-foreground: oklch(0.92 0.005 85);
+  --sidebar-accent: oklch(0.27 0.008 70);
+  --sidebar-accent-foreground: oklch(0.96 0.005 85);
+  --sidebar-border: oklch(1 0 0 / 10%);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "cv01", "ss01";
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.021em;
+    text-wrap: balance;
+  }
+
+  ::selection {
+    background: var(--primary-soft);
+  }
+}
+
+/* Utilities ------------------------------------------------------------- */
+
+@utility panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+@utility hairline-t {
+  border-top: 1px solid var(--border);
+}
+
+@utility label-caps {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-foreground);
+}
+
+@utility num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+@utility grid-canvas {
+  background-image:
+    linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 1;
+}
+
+@utility focus-ring {
+  &:focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+}
+
+@keyframes pm-rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility animate-rise {
+  animation: pm-rise 240ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes pm-pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in oklab, var(--primary) 35%, transparent);
+  }
+  100% {
+    box-shadow: 0 0 0 10px transparent;
+  }
+}
+
+@utility pulse-ring {
+  animation: pm-pulse-ring 1.8s ease-out infinite;
+}

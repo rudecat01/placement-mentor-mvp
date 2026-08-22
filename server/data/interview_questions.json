@@ -1,0 +1,1369 @@
+{
+  "metadata": {
+    "version": "2.0.0",
+    "title": "Master Software Engineering Interview Question Bank",
+    "description": "Standardized, multi-stage technical and behavioral question bank curated from real interview loops at Google, Meta, Amazon, Microsoft, Apple, Netflix, and tier-1 product companies.",
+    "last_updated": "2026-08-22",
+    "total_stages": 9
+  },
+  "stages": [
+    {
+      "stage_id": "STAGE_1_INTRO",
+      "stage_number": 1,
+      "name": "Introduction & Background",
+      "description": "Icebreakers, professional narrative, technical interests, and motivation.",
+      "questions": [
+        {
+          "id": "Q_STAGE1_001",
+          "topic": "Background & Introduction",
+          "difficulty": "Easy",
+          "question": "Hi! Welcome to your interview today. Let's start with a brief introduction. Could you tell me a little about yourself, your background, and what you've been focused on recently?",
+          "context_hint": "Look for a structured 2-minute elevator pitch highlighting engineering milestones, education, and technical focus.",
+          "follow_ups": [
+            "What inspired you to dive into software engineering and your specific area of focus?",
+            "What is a recent technical skill or framework you explored independently?"
+          ],
+          "eval_criteria": [
+            "Clarity of communication",
+            "Conciseness",
+            "Technical passion"
+          ],
+          "target_companies": [
+            "Google",
+            "Meta",
+            "Amazon",
+            "Microsoft",
+            "Apple",
+            "Netflix"
+          ],
+          "keywords": [
+            "background",
+            "introduction",
+            "journey",
+            "education",
+            "experience",
+            "about yourself"
+          ],
+          "stage_id": "STAGE_1_INTRO",
+          "stage_number": 1,
+          "stage_name": "Introduction & Background"
+        },
+        {
+          "id": "Q_STAGE1_002",
+          "topic": "Recent Project Walkthrough",
+          "difficulty": "Easy",
+          "question": "Could you walk me through one of the software or engineering projects you've worked on recently and what problem you were solving?",
+          "context_hint": "Candidate should summarize the project goal, core stack, and high-level architecture.",
+          "follow_ups": [
+            "What motivated you to choose that specific problem space?",
+            "Who were the intended users or consumers of the system?"
+          ],
+          "eval_criteria": [
+            "Problem formulation",
+            "High-level architectural overview",
+            "Clarity"
+          ],
+          "target_companies": [
+            "Google",
+            "Meta",
+            "Amazon",
+            "Microsoft",
+            "Apple",
+            "Netflix"
+          ],
+          "keywords": [
+            "project",
+            "walkthrough",
+            "recent project",
+            "built",
+            "application",
+            "system"
+          ],
+          "stage_id": "STAGE_1_INTRO",
+          "stage_number": 1,
+          "stage_name": "Introduction & Background"
+        },
+        {
+          "id": "Q_STAGE1_003",
+          "topic": "Personal Contribution & Architecture",
+          "difficulty": "Easy",
+          "question": "What was your specific role and personal contribution to the design and implementation of that project?",
+          "context_hint": "Look for individual ownership ('I designed/implemented') rather than vague team statements.",
+          "follow_ups": [
+            "Which component or service did you write from scratch?",
+            "Why did you select the primary programming language or database for it?"
+          ],
+          "eval_criteria": [
+            "Personal ownership",
+            "Technical role definition",
+            "Stack justification"
+          ],
+          "target_companies": [
+            "Google",
+            "Meta",
+            "Amazon",
+            "Microsoft",
+            "Apple"
+          ],
+          "keywords": [
+            "contribution",
+            "role",
+            "ownership",
+            "implementation",
+            "design"
+          ],
+          "stage_id": "STAGE_1_INTRO",
+          "stage_number": 1,
+          "stage_name": "Introduction & Background"
+        },
+        {
+          "id": "Q_STAGE1_004",
+          "topic": "Project Challenges & Bottlenecks",
+          "difficulty": "Medium",
+          "question": "What was the most challenging technical hurdle, performance bottleneck, or bug you encountered during that project, and how did you solve it?",
+          "context_hint": "Candidate should explain the root cause, diagnostic steps, and the concrete technical resolution.",
+          "follow_ups": [
+            "What measurable metric improved after your fix?",
+            "What would you do differently if you built it again from scratch?"
+          ],
+          "eval_criteria": [
+            "Analytical debugging",
+            "Root cause problem solving",
+            "Resilience"
+          ],
+          "target_companies": [
+            "Google",
+            "Meta",
+            "Amazon",
+            "Microsoft",
+            "Netflix"
+          ],
+          "keywords": [
+            "challenge",
+            "bottleneck",
+            "hurdle",
+            "bug",
+            "difficulty",
+            "tradeoffs"
+          ],
+          "stage_id": "STAGE_1_INTRO",
+          "stage_number": 1,
+          "stage_name": "Introduction & Background"
+        },
+        {
+          "id": "Q_STAGE_1_INTRO_AUTO_005_112901",
+          "topic": "Technical Challenges & Bottlenecks",
+          "subtopic": "Project Analysis",
+          "difficulty": "Medium",
+          "question": "What was the most significant technical bottleneck or edge case you encountered while building this project, and how did you resolve it?",
+          "context_hint": "Targeted follow-up probing Technical Challenges & Bottlenecks.",
+          "follow_ups": [
+            "What quantitative metrics did you observe after this choice?",
+            "What alternative approaches did you consider?"
+          ],
+          "eval_criteria": [
+            "Technical depth",
+            "Architectural clarity",
+            "Problem solving"
+          ],
+          "target_companies": [
+            "Google"
+          ],
+          "keywords": [
+            "engineering",
+            "architecture"
+          ],
+          "source": "LLM-generated",
+          "parent_question_id": "Q_STAGE1_001",
+          "times_asked": 1,
+          "created_at": "2026-08-22T11:29:01.280519+00:00",
+          "last_asked": "2026-08-22T11:29:01.280519+00:00",
+          "stage_id": "STAGE_1_INTRO"
+        }
+      ]
+    },
+    {
+      "stage_id": "STAGE_2_PROJECT_DEEP_DIVE",
+      "stage_number": 2,
+      "name": "Project & Experience Deep Dive",
+      "description": "In-depth interrogation of architecture, design decisions, trade-offs, scalability, and bottlenecks.",
+      "questions": [
+        {
+          "id": "Q_STAGE2_001",
+          "topic": "System Architecture & Decision Making",
+          "difficulty": "Medium",
+          "question": "Walk me through the high-level architecture of your most impactful project. What were the core components, data flow, and key design constraints?",
+          "context_hint": "Candidate should draw or describe the layered architecture clearly (client, API, services, DB, cache, async queues).",
+          "follow_ups": [
+            "Why did you choose this particular tech stack or architecture over the alternatives?",
+            "What single architectural decision would you change if you had to rebuild it today?"
+          ],
+          "eval_criteria": [
+            "Architectural clarity",
+            "Component isolation",
+            "Justification of choices"
+          ],
+          "target_companies": [
+            "Google",
+            "Meta",
+            "Amazon",
+            "Microsoft",
+            "Netflix"
+          ],
+          "keywords": [
+            "architecture",
+            "data flow",
+            "components",
+            "tech stack",
+            "design choices"
+          ],
+          "stage_id": "STAGE_2_PROJECT_DEEP_DIVE",
+          "stage_number": 2,
+          "stage_name": "Project & Experience Deep Dive"
+        },
+        {
+          "id": "Q_STAGE2_002",
+          "topic": "Performance Bottlenecks & Optimization",
+          "difficulty": "Hard",
+          "question": "What was the biggest performance bottleneck or scaling challenge you encountered in this project, and how did you diagnose and resolve it?",
+          "context_hint": "Candidate should mention profiling tools, metric analysis, database query tuning, caching, or concurrency fixes with concrete numbers.",
+          "follow_ups": [
+            "How did you quantitatively measure latency or throughput improvements (e.g., p95/p99 latency)?",
+            "What monitoring or alerting did you put in place to catch regressions?"
+          ],
+          "eval_criteria": [
+            "Analytical debugging",
+            "Root cause analysis",
+            "Metrics-driven engineering"
+          ],
+          "target_companies": [
+            "Google",
+            "Meta",
+            "Amazon",
+            "Netflix"
+          ],
+          "keywords": [
+            "bottleneck",
+            "latency",
+            "throughput",
+            "optimization",
+            "profiling",
+            "p99"
+          ],
+          "stage_id": "STAGE_2_PROJECT_DEEP_DIVE",
+          "stage_number": 2,
+          "stage_name": "Project & Experience Deep Dive"
+        },
+        {
+          "id": "Q_STAGE2_003",
+          "topic": "Failure Modes & Edge Cases",
+          "difficulty": "Medium",
+          "question": "Can you describe a critical failure mode, edge case, or production bug that occurred in your system? How did you handle fault tolerance and recovery?",
+          "context_hint": "Look for graceful degradation, circuit breakers, idempotency, retries with exponential backoff, or rollback strategies.",
+          "follow_ups": [
+            "How did you ensure data consistency during unexpected crashes or network partitions?",
+            "What automated tests (unit/integration/load) did you write to prevent recurrence?"
+          ],
+          "eval_criteria": [
+            "Resilience awareness",
+            "Edge case coverage",
+            "Testing rigor"
+          ],
+          "target_companies": [
+            "Amazon",
+            "Google",
+            "Microsoft",
+            "Apple"
+          ],
+          "keywords": [
+            "failure",
+            "bug",
+            "fault tolerance",
+            "recovery",
+            "resilience",
+            "testing"
+          ],
+          "stage_id": "STAGE_2_PROJECT_DEEP_DIVE",
+          "stage_number": 2,
+          "stage_name": "Project & Experience Deep Dive"
+        },
+        {
+          "id": "Q_STAGE2_004",
+          "topic": "Trade-offs & Technical Debt",
+          "difficulty": "Medium",
+          "question": "Engineering is about trade-offs. What compromises (e.g., speed of delivery vs. code cleanliness, consistency vs. latency) did you have to make in this project?",
+          "context_hint": "Candidate should show pragmatism, awareness of technical debt, and long-term mitigation plans.",
+          "follow_ups": [
+            "How did you document or prioritize the debt for subsequent refactoring?",
+            "How did you get buy-in from stakeholders or teammates on these trade-offs?"
+          ],
+          "eval_criteria": [
+            "Pragmatism",
+            "Trade-off evaluation",
+            "Technical maturity"
+          ],
+          "target_companies": [
+            "Meta",
+            "Amazon",
+            "Google",
+            "Netflix"
+          ],
+          "keywords": [
+            "trade-offs",
+            "technical debt",
+            "compromises",
+            "consistency vs latency"
+          ],
+          "stage_id": "STAGE_2_PROJECT_DEEP_DIVE",
+          "stage_number": 2,
+          "stage_name": "Project & Experience Deep Dive"
+        }
+      ]
+    },
+    {
+      "stage_id": "STAGE_3_PROGRAMMING_FUNDAMENTALS",
+      "stage_number": 3,
+      "name": "Programming Fundamentals",
+      "description": "Core computer science fundamentals: OOP, DBMS, OS, Networking, and Software Design.",
+      "questions": [
+        {
+          "id": "Q_STAGE3_001",
+          "topic": "Object-Oriented Design & SOLID",
+          "difficulty": "Easy",
+          "question": "Can you explain the SOLID principles with real-world software engineering examples? Focus particularly on the Dependency Inversion Principle.",
+          "context_hint": "Candidate should give concrete code/system examples rather than textbook definitions.",
+          "follow_ups": [
+            "How does Dependency Injection facilitate unit testing and loose coupling?",
+            "What is the difference between composition and inheritance, and why is composition often favored?"
+          ],
+          "eval_criteria": [
+            "Understanding of modularity",
+            "Practical code architecture",
+            "SOLID mastery"
+          ],
+          "target_companies": [
+            "Microsoft",
+            "Google",
+            "Amazon",
+            "Apple"
+          ],
+          "keywords": [
+            "OOP",
+            "SOLID",
+            "dependency inversion",
+            "composition",
+            "polymorphism"
+          ],
+          "stage_id": "STAGE_3_PROGRAMMING_FUNDAMENTALS",
+          "stage_number": 3,
+          "stage_name": "Programming Fundamentals"
+        },
+        {
+          "id": "Q_STAGE3_002",
+          "topic": "Operating Systems & Concurrency",
+          "difficulty": "Medium",
+          "question": "What is the difference between a process and a thread? Explain how the OS manages context switching and how race conditions and deadlocks occur.",
+          "context_hint": "Explain shared memory space vs. isolated address space, thread stacks, mutexes/semaphores, and the 4 Coffman conditions for deadlocks.",
+          "follow_ups": [
+            "How do you prevent deadlocks in a multi-threaded application?",
+            "What is the difference between synchronous vs. asynchronous and blocking vs. non-blocking I/O?"
+          ],
+          "eval_criteria": [
+            "OS memory models",
+            "Concurrency synchronization",
+            "Deadlock prevention"
+          ],
+          "target_companies": [
+            "Google",
+            "Meta",
+            "Microsoft",
+            "Apple"
+          ],
+          "keywords": [
+            "process",
+            "thread",
+            "concurrency",
+            "race condition",
+            "deadlock",
+            "mutex"
+          ],
+          "stage_id": "STAGE_3_PROGRAMMING_FUNDAMENTALS",
+          "stage_number": 3,
+          "stage_name": "Programming Fundamentals"
+        },
+        {
+          "id": "Q_STAGE3_003",
+          "topic": "DBMS & Transactions",
+          "difficulty": "Medium",
+          "question": "Explain the ACID properties of database transactions. How do transaction isolation levels (Read Uncommitted, Read Committed, Repeatable Read, Serializable) protect against concurrency anomalies?",
+          "context_hint": "Define dirty reads, non-repeatable reads, phantom reads, and write skew.",
+          "follow_ups": [
+            "How does Write-Ahead Logging (WAL) guarantee durability and crash recovery?",
+            "When would you choose an optimistic concurrency control strategy over pessimistic locking?"
+          ],
+          "eval_criteria": [
+            "ACID rigor",
+            "Isolation level tradeoffs",
+            "Transaction safety"
+          ],
+          "target_companies": [
+            "Amazon",
+            "Google",
+            "Microsoft",
+            "Meta"
+          ],
+          "keywords": [
+            "DBMS",
+            "ACID",
+            "transactions",
+            "isolation levels",
+            "phantom reads",
+            "locks"
+          ],
+          "stage_id": "STAGE_3_PROGRAMMING_FUNDAMENTALS",
+          "stage_number": 3,
+          "stage_name": "Programming Fundamentals"
+        },
+        {
+          "id": "Q_STAGE3_004",
+          "topic": "Computer Networks & Protocols",
+          "difficulty": "Medium",
+          "question": "Explain what happens step-by-step when you type a URL like 'https://www.google.com' in a browser and press Enter.",
+          "context_hint": "Candidate should trace: DNS resolution -> TCP 3-way handshake -> TLS handshake -> HTTP GET -> Server processing -> Response rendering.",
+          "follow_ups": [
+            "How does TLS 1.3 optimize the handshake latency compared to TLS 1.2?",
+            "What is the difference between HTTP/1.1, HTTP/2 (multiplexing), and HTTP/3 (QUIC/UDP)?"
+          ],
+          "eval_criteria": [
+            "End-to-end network stack comprehension",
+            "Security/TLS awareness",
+            "Protocol evolution"
+          ],
+          "target_companies": [
+            "Google",
+            "Meta",
+            "Amazon",
+            "Cloudflare",
+            "Netflix"
+          ],
+          "keywords": [
+            "networks",
+            "DNS",
+            "TCP",
+            "TLS",
+            "HTTP/2",
+            "HTTP/3",
+            "handshake"
+          ],
+          "stage_id": "STAGE_3_PROGRAMMING_FUNDAMENTALS",
+          "stage_number": 3,
+          "stage_name": "Programming Fundamentals"
+        }
+      ]
+    },
+    {
+      "stage_id": "STAGE_4_DSA",
+      "stage_number": 4,
+      "name": "Data Structures & Algorithms",
+      "description": "Comprehensive algorithmic patterns spanning Arrays, HashMaps, Two Pointers, Sliding Window, Stacks, Trees, Graphs, DP, and Heaps.",
+      "questions": [
+        {
+          "id": "Q_DSA_ARR_001",
+          "topic": "Arrays & Two Pointers",
+          "difficulty": "Easy",
+          "question": "Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order in O(N) time.",
+          "context_hint": "Negative numbers square to positive values; two pointers at ends moving inward solves this in O(N) without O(N log N) sorting.",
+          "follow_ups": [
+            "Why is standard sorting sub-optimal here?",
+            "How do you handle in-place modification if an auxiliary array is restricted?"
+          ],
+          "eval_criteria": [
+            "Optimal two-pointer approach",
+            "O(N) time complexity",
+            "Edge case handling (all negative, all positive)"
+          ],
+          "target_companies": [
+            "Google",
+            "Meta",
+            "Amazon",
+            "Microsoft"
+          ],
+          "keywords": [
+            "arrays",
+            "two pointers",
+            "squares of sorted array",
+            "O(N)"
+          ],
+          "stage_id": "STAGE_4_DSA",
+          "stage_number": 4,
+          "stage_name": "Data Structures & Algorithms"
+        },
+        {
+          "id": "Q_DSA_SLIDE_002",
+          "topic": "Sliding Window",
+          "difficulty": "Medium",
+          "question": "Given a string s, find the length of the longest substring without repeating characters. Can you describe an optimal sliding window approach?",
+          "context_hint": "Use a hash map/set to track characters and indices, dynamically adjusting left pointer on duplicate detection.",
+          "follow_ups": [
+            "What is the exact time and space complexity with ASCII vs. Unicode charset?",
+            "How would you adapt the solution to allow at most K distinct characters?"
+          ],
+          "eval_criteria": [
+            "Sliding window invariant",
+            "O(N) time complexity",
+            "Space complexity bounds"
+          ],
+          "target_companies": [
+            "Meta",
+            "Amazon",
+            "Google",
+            "Microsoft",
+            "Apple"
+          ],
+          "keywords": [
+            "sliding window",
+            "longest substring",
+            "hash map",
+            "strings"
+          ],
+          "stage_id": "STAGE_4_DSA",
+          "stage_number": 4,
+          "stage_name": "Data Structures & Algorithms"
+        },
+        {
+          "id": "Q_DSA_STACK_003",
+          "topic": "Monotonic Stack",
+          "difficulty": "Medium",
+          "question": "Given an array of temperatures, return an array such that answer[i] is the number of days you have to wait after the i-th day to get a warmer temperature. If there is no future day, keep answer[i] == 0.",
+          "context_hint": "Monotonic decreasing stack storing indices. Pop elements when a warmer day is found.",
+          "follow_ups": [
+            "Why does the monotonic stack achieve O(N) time even with nested while loops?",
+            "How does this pattern generalize to 'Largest Rectangle in Histogram' or 'Trapping Rain Water'?"
+          ],
+          "eval_criteria": [
+            "Monotonic stack intuition",
+            "Amortized O(N) complexity proof",
+            "Index management"
+          ],
+          "target_companies": [
+            "Google",
+            "Amazon",
+            "Meta",
+            "Microsoft"
+          ],
+          "keywords": [
+            "stack",
+            "monotonic stack",
+            "daily temperatures",
+            "next greater element"
+          ],
+          "stage_id": "STAGE_4_DSA",
+          "stage_number": 4,
+          "stage_name": "Data Structures & Algorithms"
+        },
+        {
+          "id": "Q_DSA_TREE_004",
+          "topic": "Trees & Binary Search Trees",
+          "difficulty": "Medium",
+          "question": "Given the root of a binary tree, find the lowest common ancestor (LCA) of two given nodes p and q. How does your approach differ if it's a BST vs. a general Binary Tree?",
+          "context_hint": "In BST: use value ordering O(H). In general Binary Tree: post-order recursive traversal checking left and right subtrees.",
+          "follow_ups": [
+            "What is the worst-case space complexity due to recursion call stack for skewed trees?",
+            "How would you solve this iteratively without recursion?"
+          ],
+          "eval_criteria": [
+            "Tree traversal recursion",
+            "BST properties utilization",
+            "Call stack awareness"
+          ],
+          "target_companies": [
+            "Meta",
+            "Google",
+            "Amazon",
+            "Microsoft",
+            "Apple"
+          ],
+          "keywords": [
+            "binary tree",
+            "BST",
+            "LCA",
+            "lowest common ancestor",
+            "recursion"
+          ],
+          "stage_id": "STAGE_4_DSA",
+          "stage_number": 4,
+          "stage_name": "Data Structures & Algorithms"
+        },
+        {
+          "id": "Q_DSA_GRAPH_005",
+          "topic": "Graphs & Topological Sort",
+          "difficulty": "Medium",
+          "question": "There are a total of numCourses you have to take, labeled from 0 to numCourses - 1. You are given prerequisites where prerequisites[i] = [ai, bi] indicates bi must be taken before ai. Can you finish all courses? If yes, return a valid course schedule order.",
+          "context_hint": "Cycle detection in directed graph using Kahn's algorithm (indegree BFS) or DFS with 3-state coloring (White/Gray/Black).",
+          "follow_ups": [
+            "What is the time complexity in terms of V (vertices) and E (edges)?",
+            "How would you detect all disconnected components or cycles in the dependency graph?"
+          ],
+          "eval_criteria": [
+            "Graph representation (adjacency list)",
+            "Topological sort (Kahn/DFS)",
+            "Cycle detection"
+          ],
+          "target_companies": [
+            "Google",
+            "Meta",
+            "Amazon",
+            "Microsoft",
+            "Netflix"
+          ],
+          "keywords": [
+            "graphs",
+            "topological sort",
+            "course schedule",
+            "cycle detection",
+            "BFS/DFS"
+          ],
+          "stage_id": "STAGE_4_DSA",
+          "stage_number": 4,
+          "stage_name": "Data Structures & Algorithms"
+        },
+        {
+          "id": "Q_DSA_DP_006",
+          "topic": "Dynamic Programming",
+          "difficulty": "Hard",
+          "question": "Given two strings word1 and word2, return the minimum number of operations (insert, delete, replace) required to convert word1 to word2 (Edit Distance / Levenshtein Distance).",
+          "context_hint": "2D DP state dp[i][j] representing edit distance between word1[0..i] and word2[0..j]. Transition: if characters match dp[i-1][j-1], else 1 + min(insert, delete, replace).",
+          "follow_ups": [
+            "How can you optimize the space complexity from O(M * N) to O(min(M, N))?",
+            "How would the state transition change if operations had different assigned costs?"
+          ],
+          "eval_criteria": [
+            "State definition & base cases",
+            "Recurrence relation",
+            "Space optimization"
+          ],
+          "target_companies": [
+            "Google",
+            "Amazon",
+            "Meta",
+            "Microsoft"
+          ],
+          "keywords": [
+            "dynamic programming",
+            "edit distance",
+            "levenshtein",
+            "2D DP",
+            "optimization"
+          ],
+          "stage_id": "STAGE_4_DSA",
+          "stage_number": 4,
+          "stage_name": "Data Structures & Algorithms"
+        },
+        {
+          "id": "Q_DSA_HEAP_007",
+          "topic": "Heaps & Priority Queues",
+          "difficulty": "Hard",
+          "question": "You are given an array of k linked-lists lists, each linked-list is sorted in ascending order. Merge all the linked-lists into one sorted linked-list and return it.",
+          "context_hint": "Min-Heap of size K storing node pointers gives O(N log K) time and O(K) space, where N is total nodes. Divide-and-conquer merge also works in O(N log K) with O(1) space.",
+          "follow_ups": [
+            "Compare the Min-Heap approach with Divide & Conquer pair-wise merging in terms of memory locality and space.",
+            "What happens if one of the linked lists is extremely long compared to the others?"
+          ],
+          "eval_criteria": [
+            "Min-Heap usage",
+            "O(N log K) complexity analysis",
+            "Pointer manipulation"
+          ],
+          "target_companies": [
+            "Google",
+            "Amazon",
+            "Meta",
+            "Microsoft",
+            "Apple"
+          ],
+          "keywords": [
+            "heap",
+            "priority queue",
+            "merge k sorted lists",
+            "linked lists",
+            "divide and conquer"
+          ],
+          "stage_id": "STAGE_4_DSA",
+          "stage_number": 4,
+          "stage_name": "Data Structures & Algorithms"
+        },
+        {
+          "id": "Q_DSA_INTERVALS_008",
+          "topic": "Intervals & Greedy",
+          "difficulty": "Medium",
+          "question": "Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.",
+          "context_hint": "Sort intervals by start time. Iterate and merge if current start <= previous end; otherwise append new interval.",
+          "follow_ups": [
+            "What is the bottleneck step for time complexity?",
+            "How would you solve this if intervals were arriving as a real-time infinite stream (Insert Interval problem)?"
+          ],
+          "eval_criteria": [
+            "Sorting strategy",
+            "Greedy merge condition",
+            "Edge cases (nested intervals, identical intervals)"
+          ],
+          "target_companies": [
+            "Google",
+            "Meta",
+            "Amazon",
+            "Microsoft",
+            "Netflix"
+          ],
+          "keywords": [
+            "intervals",
+            "merge intervals",
+            "greedy",
+            "sorting"
+          ],
+          "stage_id": "STAGE_4_DSA",
+          "stage_number": 4,
+          "stage_name": "Data Structures & Algorithms"
+        }
+      ]
+    },
+    {
+      "stage_id": "STAGE_5_CODING_FOLLOWUPS",
+      "stage_number": 5,
+      "name": "Coding Interview Follow-ups & Optimization",
+      "description": "Probing questions after initial code submission: complexity analysis, scale limits, edge cases, and in-place optimizations.",
+      "questions": [
+        {
+          "id": "Q_STAGE5_001",
+          "topic": "Complexity & Big-O Verification",
+          "difficulty": "Medium",
+          "question": "What is the exact asymptotic time and auxiliary space complexity of your solution? Walk me through each line or loop to prove your Big-O bound.",
+          "context_hint": "Ensure candidate separates time complexity from auxiliary space (excluding input/output buffers).",
+          "follow_ups": [
+            "Is your space complexity driven by recursion stack or explicit allocations?",
+            "What is the best-case vs. worst-case input scenario?"
+          ],
+          "eval_criteria": [
+            "Mathematical Big-O rigor",
+            "Call stack space awareness",
+            "Worst vs average case"
+          ],
+          "target_companies": [
+            "Google",
+            "Meta",
+            "Amazon",
+            "Microsoft"
+          ],
+          "keywords": [
+            "complexity",
+            "big O",
+            "space complexity",
+            "time complexity",
+            "worst case"
+          ],
+          "stage_id": "STAGE_5_CODING_FOLLOWUPS",
+          "stage_number": 5,
+          "stage_name": "Coding Interview Follow-ups & Optimization"
+        },
+        {
+          "id": "Q_STAGE5_002",
+          "topic": "Scale & Memory Limits",
+          "difficulty": "Hard",
+          "question": "Suppose the input dataset does not fit into RAM (e.g., 500 GB array on a machine with 8 GB RAM). How would you modify your algorithm?",
+          "context_hint": "External merge sort, chunking, memory-mapped files, stream processing, or disk-based data structures.",
+          "follow_ups": [
+            "How does disk I/O latency change the primary bottleneck of the algorithm?",
+            "How would you parallelize the processing across multi-core processors?"
+          ],
+          "eval_criteria": [
+            "External memory algorithms",
+            "I/O bound thinking",
+            "Distributed data handling"
+          ],
+          "target_companies": [
+            "Google",
+            "Meta",
+            "Amazon",
+            "Netflix"
+          ],
+          "keywords": [
+            "large scale",
+            "external sort",
+            "out of memory",
+            "streaming",
+            "disk IO"
+          ],
+          "stage_id": "STAGE_5_CODING_FOLLOWUPS",
+          "stage_number": 5,
+          "stage_name": "Coding Interview Follow-ups & Optimization"
+        },
+        {
+          "id": "Q_STAGE5_003",
+          "topic": "Edge Cases & Defensive Coding",
+          "difficulty": "Easy",
+          "question": "What edge cases have you considered for this problem? How does your code behave with empty inputs, duplicates, integer overflow, or null pointers?",
+          "context_hint": "Look for thoroughness: empty arrays, single-element arrays, extreme integer bounds (INT_MIN/INT_MAX), all duplicate values.",
+          "follow_ups": [
+            "What automated unit tests would you write to guarantee 100% branch coverage?",
+            "How would you sanitize and validate untrusted input before algorithm execution?"
+          ],
+          "eval_criteria": [
+            "Defensive programming",
+            "Boundary condition identification",
+            "Test completeness"
+          ],
+          "target_companies": [
+            "Google",
+            "Amazon",
+            "Microsoft",
+            "Apple"
+          ],
+          "keywords": [
+            "edge cases",
+            "overflow",
+            "null checks",
+            "unit testing",
+            "boundary conditions"
+          ],
+          "stage_id": "STAGE_5_CODING_FOLLOWUPS",
+          "stage_number": 5,
+          "stage_name": "Coding Interview Follow-ups & Optimization"
+        }
+      ]
+    },
+    {
+      "stage_id": "STAGE_6_CS_ENGINEERING",
+      "stage_number": 6,
+      "name": "CS Fundamentals & Practical Engineering",
+      "description": "Real-world engineering practices: DB indexing, caching strategies, concurrency controls, API contracts, and profiling.",
+      "questions": [
+        {
+          "id": "Q_STAGE6_001",
+          "topic": "Database Indexing & Query Optimization",
+          "difficulty": "Medium",
+          "question": "How do B-Tree and LSM-Tree indexes work internally? When would you use a composite index, and what is index selectivity and the leftmost prefix rule?",
+          "context_hint": "Explain B-Tree node balancing, read optimization vs. LSM-Tree sequential append write optimization (MemTable + SSTable + Compaction).",
+          "follow_ups": [
+            "Why can excessive indexing degrade write performance in OLTP workloads?",
+            "How do you inspect a slow query execution plan using EXPLAIN ANALYZE?"
+          ],
+          "eval_criteria": [
+            "Storage engine internals",
+            "Index design principles",
+            "Query profiling"
+          ],
+          "target_companies": [
+            "Google",
+            "Amazon",
+            "Meta",
+            "Netflix"
+          ],
+          "keywords": [
+            "database",
+            "B-tree",
+            "LSM-tree",
+            "indexing",
+            "composite index",
+            "explain analyze"
+          ],
+          "stage_id": "STAGE_6_CS_ENGINEERING",
+          "stage_number": 6,
+          "stage_name": "CS Fundamentals & Practical Engineering"
+        },
+        {
+          "id": "Q_STAGE6_002",
+          "topic": "Caching Strategies & Invalidation",
+          "difficulty": "Medium",
+          "question": "Explain the major caching patterns: Cache-Aside, Write-Through, Write-Behind (Write-Back), and Refresh-Ahead. How do you solve cache stampede (thundering herd) and cache penetration?",
+          "context_hint": "Discuss Redis/Memcached, Bloom filters for penetration, mutex locks/probabilistic early expiration for stampedes, and cache invalidation strategies.",
+          "follow_ups": [
+            "How do you ensure consistency between Redis cache and a PostgreSQL primary database under high write concurrency?",
+            "What eviction policies (LRU, LFU, ARC) are best suited for skewed access patterns?"
+          ],
+          "eval_criteria": [
+            "Caching topologies",
+            "Cache invalidation complexity",
+            "Consistency trade-offs"
+          ],
+          "target_companies": [
+            "Meta",
+            "Amazon",
+            "Google",
+            "Netflix"
+          ],
+          "keywords": [
+            "caching",
+            "Redis",
+            "cache-aside",
+            "thundering herd",
+            "cache penetration",
+            "LRU"
+          ],
+          "stage_id": "STAGE_6_CS_ENGINEERING",
+          "stage_number": 6,
+          "stage_name": "CS Fundamentals & Practical Engineering"
+        },
+        {
+          "id": "Q_STAGE6_003",
+          "topic": "API Design & Idempotency",
+          "difficulty": "Medium",
+          "question": "How do you design a reliable payment processing API that guarantees exactly-once processing semantics even when network retries occur?",
+          "context_hint": "Idempotency keys stored in database/cache, unique constraint transactions, deterministic response caching on duplicate requests.",
+          "follow_ups": [
+            "What HTTP status codes and headers should be returned during an in-flight duplicate request?",
+            "How do you handle distributed transactions across multiple microservices (e.g., Saga Pattern vs. 2PC)?"
+          ],
+          "eval_criteria": [
+            "Idempotency implementation",
+            "Distributed transaction patterns (Saga)",
+            "REST API hygiene"
+          ],
+          "target_companies": [
+            "Stripe",
+            "Amazon",
+            "Google",
+            "Microsoft",
+            "Uber"
+          ],
+          "keywords": [
+            "API design",
+            "idempotency",
+            "payment API",
+            "Saga pattern",
+            "2PC",
+            "retries"
+          ],
+          "stage_id": "STAGE_6_CS_ENGINEERING",
+          "stage_number": 6,
+          "stage_name": "CS Fundamentals & Practical Engineering"
+        }
+      ]
+    },
+    {
+      "stage_id": "STAGE_7_SYSTEM_DESIGN",
+      "stage_number": 7,
+      "name": "System Design & Architecture",
+      "description": "Progressive end-to-end system design: Requirements -> API -> Architecture -> Storage -> Scaling -> Reliability -> Bottlenecks.",
+      "questions": [
+        {
+          "id": "Q_SYS_URL_001",
+          "topic": "URL Shortener (TinyURL)",
+          "difficulty": "Medium",
+          "question": "Design a scalable URL shortener service like TinyURL or bit.ly. Walk me through functional requirements, capacity estimation, API endpoints, short-link generation (Base62 vs. MD5 hashing), database schema, and caching.",
+          "context_hint": "Focus on high read-to-write ratio (100:1), Base62 encoding from distributed counter/snowflake ID generator, Redis cache for hot URLs, 301 vs 302 redirects.",
+          "follow_ups": [
+            "How do you handle custom alias collisions or link expiration cleanup?",
+            "Why would you use HTTP 302 (Found) over HTTP 301 (Moved Permanently) if click analytics are required?"
+          ],
+          "eval_criteria": [
+            "Capacity estimation",
+            "Unique ID generation without collision",
+            "Caching and 301/302 tradeoffs"
+          ],
+          "target_companies": [
+            "Google",
+            "Meta",
+            "Amazon",
+            "Microsoft"
+          ],
+          "keywords": [
+            "system design",
+            "URL shortener",
+            "Base62",
+            "TinyURL",
+            "caching",
+            "redirects"
+          ],
+          "stage_id": "STAGE_7_SYSTEM_DESIGN",
+          "stage_number": 7,
+          "stage_name": "System Design & Architecture"
+        },
+        {
+          "id": "Q_SYS_CHAT_002",
+          "topic": "Real-Time Chat System (Slack / WhatsApp)",
+          "difficulty": "Hard",
+          "question": "Design a real-time messaging application like WhatsApp or Slack supporting 1-on-1 chat, group chat with up to 500 members, online presence indicator, and message delivery receipts (sent, delivered, read).",
+          "context_hint": "WebSockets for bidirectional messaging, Cassandra/ScyllaDB for high-throughput message history, Redis for presence, Kafka for fanout in group chats.",
+          "follow_ups": [
+            "How do you guarantee total message ordering across multiple distributed chat servers?",
+            "How do you handle offline message queuing and push notifications when a recipient reconnects?"
+          ],
+          "eval_criteria": [
+            "WebSocket connection management",
+            "Message ordering & serialization",
+            "Fanout scaling in group chats"
+          ],
+          "target_companies": [
+            "Meta",
+            "Google",
+            "Discord",
+            "Microsoft",
+            "Apple"
+          ],
+          "keywords": [
+            "system design",
+            "chat",
+            "WebSockets",
+            "WhatsApp",
+            "Cassandra",
+            "Kafka",
+            "presence"
+          ],
+          "stage_id": "STAGE_7_SYSTEM_DESIGN",
+          "stage_number": 7,
+          "stage_name": "System Design & Architecture"
+        },
+        {
+          "id": "Q_SYS_RATELIMIT_003",
+          "topic": "Distributed Rate Limiter",
+          "difficulty": "Medium",
+          "question": "Design a distributed API rate limiter that can handle 100,000 requests per second across a cluster of API gateways. Compare Token Bucket, Leaky Bucket, Sliding Window Log, and Sliding Window Counter algorithms.",
+          "context_hint": "Token Bucket / Sliding Window Counter with Redis and Lua scripts for atomic increments. Discuss race conditions and localized in-memory buffers.",
+          "follow_ups": [
+            "How do you eliminate race conditions between multiple rate limiter worker instances querying Redis?",
+            "How do you handle client notification when rate limits are exceeded (HTTP 429 and Retry-After header)?"
+          ],
+          "eval_criteria": [
+            "Algorithm comparison",
+            "Atomic operations (Lua scripts)",
+            "Low-latency distributed synchronization"
+          ],
+          "target_companies": [
+            "Cloudflare",
+            "Stripe",
+            "Google",
+            "Amazon",
+            "Meta"
+          ],
+          "keywords": [
+            "system design",
+            "rate limiter",
+            "token bucket",
+            "sliding window",
+            "Redis Lua",
+            "HTTP 429"
+          ],
+          "stage_id": "STAGE_7_SYSTEM_DESIGN",
+          "stage_number": 7,
+          "stage_name": "System Design & Architecture"
+        },
+        {
+          "id": "Q_SYS_FEED_004",
+          "topic": "News Feed / Social Timeline (Twitter / Instagram)",
+          "difficulty": "Hard",
+          "question": "Design a scalable social news feed system like Twitter or Instagram. Discuss the trade-offs between Fanout-on-Write (Push model) vs. Fanout-on-Read (Pull model), especially for celebrity users with millions of followers.",
+          "context_hint": "Hybrid fanout model: Push for regular users, Pull for celebrities. Feed ranking service, Redis feed cache, media CDN storage.",
+          "follow_ups": [
+            "How do you paginate the news feed efficiently without cursor-based offset degradation?",
+            "How do you personalize and rank the feed dynamically based on user engagement metrics?"
+          ],
+          "eval_criteria": [
+            "Push vs Pull hybrid fanout",
+            "Celebrity problem handling",
+            "Cursor pagination"
+          ],
+          "target_companies": [
+            "Meta",
+            "Twitter/X",
+            "ByteDance",
+            "Google",
+            "Pinterest"
+          ],
+          "keywords": [
+            "system design",
+            "news feed",
+            "fanout on write",
+            "fanout on read",
+            "timeline",
+            "pagination"
+          ],
+          "stage_id": "STAGE_7_SYSTEM_DESIGN",
+          "stage_number": 7,
+          "stage_name": "System Design & Architecture"
+        },
+        {
+          "id": "Q_SYS_NOTIF_005",
+          "topic": "Notification System (Push, SMS, Email)",
+          "difficulty": "Medium",
+          "question": "Design a high-throughput notification service capable of sending millions of personalized push notifications, SMS messages, and emails daily with rate limits and user notification preferences.",
+          "context_hint": "Priority queues (Kafka/RabbitMQ), worker pools, third-party integrations (APNs, FCM, Twilio, SendGrid), deduplication and rate limiting.",
+          "follow_ups": [
+            "How do you handle third-party provider outages without dropping notifications?",
+            "How do you guarantee user opt-out and quiet hours preferences across time zones?"
+          ],
+          "eval_criteria": [
+            "Asynchronous queue design",
+            "Deduplication & retry semantics",
+            "Third-party failure isolation"
+          ],
+          "target_companies": [
+            "Uber",
+            "Amazon",
+            "Netflix",
+            "Google",
+            "Apple"
+          ],
+          "keywords": [
+            "system design",
+            "notifications",
+            "Kafka",
+            "APNs",
+            "FCM",
+            "SMS",
+            "deduplication"
+          ],
+          "stage_id": "STAGE_7_SYSTEM_DESIGN",
+          "stage_number": 7,
+          "stage_name": "System Design & Architecture"
+        }
+      ]
+    },
+    {
+      "stage_id": "STAGE_8_BEHAVIORAL",
+      "stage_number": 8,
+      "name": "Behavioral & Situational (STAR Framework)",
+      "description": "Leadership principles, ownership, conflict resolution, failure post-mortems, and navigating ambiguity.",
+      "questions": [
+        {
+          "id": "Q_BEH_OWN_001",
+          "topic": "Ownership & Initiative",
+          "difficulty": "Medium",
+          "question": "Tell me about a time when you identified a critical problem or opportunity that was outside your direct scope of responsibility. What action did you take, and what was the outcome?",
+          "context_hint": "Candidate should use STAR format (Situation, Task, Action, Result) showing proactive leadership and clear results.",
+          "follow_ups": [
+            "What resistance did you encounter from other team members, and how did you overcome it?",
+            "Looking back, what could you have done to execute even more effectively?"
+          ],
+          "eval_criteria": [
+            "Proactive ownership",
+            "STAR method adherence",
+            "Quantified business or technical outcome"
+          ],
+          "target_companies": [
+            "Amazon",
+            "Google",
+            "Meta",
+            "Microsoft",
+            "Apple"
+          ],
+          "keywords": [
+            "behavioral",
+            "ownership",
+            "initiative",
+            "STAR",
+            "leadership"
+          ],
+          "stage_id": "STAGE_8_BEHAVIORAL",
+          "stage_number": 8,
+          "stage_name": "Behavioral & Situational (STAR Framework)"
+        },
+        {
+          "id": "Q_BEH_CONFLICT_002",
+          "topic": "Disagreement & Conflict Resolution",
+          "difficulty": "Medium",
+          "question": "Describe a situation where you had a strong technical disagreement with a senior engineer, peer, or manager. How did you handle the discussion, evaluate alternatives, and reach a resolution?",
+          "context_hint": "Look for objective data-driven decision making, respect for differing viewpoints, and 'disagree and commit' maturity.",
+          "follow_ups": [
+            "If your preferred proposal was not chosen, how did you maintain commitment and support the team's decision?",
+            "What did this experience teach you about technical communication?"
+          ],
+          "eval_criteria": [
+            "Constructive conflict resolution",
+            "Data-driven persuasion",
+            "Disagree and commit"
+          ],
+          "target_companies": [
+            "Amazon",
+            "Google",
+            "Meta",
+            "Netflix",
+            "Microsoft"
+          ],
+          "keywords": [
+            "behavioral",
+            "conflict",
+            "disagreement",
+            "collaboration",
+            "disagree and commit"
+          ],
+          "stage_id": "STAGE_8_BEHAVIORAL",
+          "stage_number": 8,
+          "stage_name": "Behavioral & Situational (STAR Framework)"
+        },
+        {
+          "id": "Q_BEH_FAIL_003",
+          "topic": "Failure, Post-Mortem & Resilience",
+          "difficulty": "Hard",
+          "question": "Tell me about a project that failed, suffered a major outage, or did not meet expectations. What was your personal responsibility, what went wrong, and what specific steps did you take to prevent recurrence?",
+          "context_hint": "Candidate should demonstrate accountability without blaming others, blameless post-mortem methodology, and actionable learnings.",
+          "follow_ups": [
+            "How did you communicate the failure to stakeholders and affected users?",
+            "What systematic safeguard (linting, automated canary, circuit breaker) did you institute?"
+          ],
+          "eval_criteria": [
+            "Accountability",
+            "Blameless analysis",
+            "Institutional learning"
+          ],
+          "target_companies": [
+            "Google",
+            "Amazon",
+            "Meta",
+            "Netflix",
+            "Microsoft"
+          ],
+          "keywords": [
+            "behavioral",
+            "failure",
+            "outage",
+            "post-mortem",
+            "resilience",
+            "accountability"
+          ],
+          "stage_id": "STAGE_8_BEHAVIORAL",
+          "stage_number": 8,
+          "stage_name": "Behavioral & Situational (STAR Framework)"
+        },
+        {
+          "id": "Q_BEH_AMBIG_004",
+          "topic": "Working with Ambiguity & Tight Deadlines",
+          "difficulty": "Medium",
+          "question": "Give an example of a time when you were assigned a high-priority task with incomplete specifications or ambiguous requirements under a tight deadline. How did you proceed?",
+          "context_hint": "Breaking down ambiguity into hypotheses, rapid prototyping, early stakeholder alignment, and incremental delivery.",
+          "follow_ups": [
+            "How did you balance moving fast versus building robust, maintainable software?",
+            "How did you determine what features to cut to hit the deadline?"
+          ],
+          "eval_criteria": [
+            "Handling ambiguity",
+            "Prioritization under pressure",
+            "Incremental delivery"
+          ],
+          "target_companies": [
+            "Meta",
+            "Google",
+            "Amazon",
+            "Apple",
+            "Uber"
+          ],
+          "keywords": [
+            "behavioral",
+            "ambiguity",
+            "deadlines",
+            "prioritization",
+            "fast pace"
+          ],
+          "stage_id": "STAGE_8_BEHAVIORAL",
+          "stage_number": 8,
+          "stage_name": "Behavioral & Situational (STAR Framework)"
+        }
+      ]
+    },
+    {
+      "stage_id": "STAGE_9_ROLE_FIT",
+      "stage_number": 9,
+      "name": "Final / Managerial & Role-Fit Discussion",
+      "description": "Long-term career aspirations, 90-day onboarding strategy, engineering philosophy, and candidate questions.",
+      "questions": [
+        {
+          "id": "Q_FIT_90DAY_001",
+          "topic": "30-60-90 Day Plan & Onboarding",
+          "difficulty": "Easy",
+          "question": "If you join our engineering team, what would your 30-60-90 day plan look like to ramp up, understand the codebase, and start delivering meaningful contributions?",
+          "context_hint": "30 days: onboarding, reading code/docs, fixing small bugs, pairing; 60 days: owning standalone features, participating in code reviews; 90 days: driving architecture, contributing to roadmap.",
+          "follow_ups": [
+            "How do you establish trust and strong working relationships with cross-functional partners (Product, QA, SRE)?",
+            "What resources do you find most helpful when getting familiar with a massive legacy codebase?"
+          ],
+          "eval_criteria": [
+            "Structured onboarding thought process",
+            "Proactive independence",
+            "Team integration"
+          ],
+          "target_companies": [
+            "Google",
+            "Meta",
+            "Amazon",
+            "Microsoft",
+            "Apple",
+            "Netflix"
+          ],
+          "keywords": [
+            "30-60-90 day plan",
+            "onboarding",
+            "ramp up",
+            "impact",
+            "collaboration"
+          ],
+          "stage_id": "STAGE_9_ROLE_FIT",
+          "stage_number": 9,
+          "stage_name": "Final / Managerial & Role-Fit Discussion"
+        },
+        {
+          "id": "Q_FIT_STRENGTH_002",
+          "topic": "Strengths, Weaknesses & Engineering Philosophy",
+          "difficulty": "Medium",
+          "question": "What is your greatest technical strength, and conversely, what is an engineering skill or domain you are actively working to improve right now?",
+          "context_hint": "Candidate should give genuine self-awareness with concrete actions they are taking to address their growth area.",
+          "follow_ups": [
+            "What kind of team environment and management style helps you perform at your best?",
+            "What engineering principles guide your day-to-day code reviews and software design?"
+          ],
+          "eval_criteria": [
+            "Self-awareness",
+            "Growth mindset",
+            "Engineering standards"
+          ],
+          "target_companies": [
+            "Google",
+            "Meta",
+            "Amazon",
+            "Microsoft",
+            "Apple"
+          ],
+          "keywords": [
+            "strengths",
+            "weaknesses",
+            "growth mindset",
+            "engineering philosophy"
+          ],
+          "stage_id": "STAGE_9_ROLE_FIT",
+          "stage_number": 9,
+          "stage_name": "Final / Managerial & Role-Fit Discussion"
+        },
+        {
+          "id": "Q_FIT_CANDIDATE_003",
+          "topic": "Candidate Questions & Curiosity",
+          "difficulty": "Easy",
+          "question": "We have covered a lot of ground today. What questions do you have for me about our engineering challenges, architecture, team culture, or the roadmap ahead?",
+          "context_hint": "Top candidates ask insightful questions about engineering culture, tech debt management, deployment frequency, on-call culture, and business vision.",
+          "follow_ups": [
+            "What particular technical challenge in our stack are you most eager to tackle?"
+          ],
+          "eval_criteria": [
+            "Intellectual curiosity",
+            "Insightful questions",
+            "Enthusiasm for the role"
+          ],
+          "target_companies": [
+            "Google",
+            "Meta",
+            "Amazon",
+            "Microsoft",
+            "Apple",
+            "Netflix"
+          ],
+          "keywords": [
+            "candidate questions",
+            "culture",
+            "curiosity",
+            "roadmap",
+            "engineering culture"
+          ],
+          "stage_id": "STAGE_9_ROLE_FIT",
+          "stage_number": 9,
+          "stage_name": "Final / Managerial & Role-Fit Discussion"
+        }
+      ]
+    }
+  ]
+}

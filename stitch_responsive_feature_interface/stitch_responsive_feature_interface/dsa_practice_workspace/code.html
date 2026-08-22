@@ -1,0 +1,560 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>DSA Practice Workspace - Placement Mentor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed-dim": "#c3c0ff",
+                      "surface": "#fcf9f8",
+                      "secondary-fixed-dim": "#b7c8e1",
+                      "red-team": "#DC2626",
+                      "on-primary": "#ffffff",
+                      "primary-fixed": "#e2dfff",
+                      "on-secondary": "#ffffff",
+                      "surface-tint": "#5654a8",
+                      "primary": "#1a146b",
+                      "bg-surface": "#FFFFFF",
+                      "primary-container": "#312e81",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-high": "#eae7e7",
+                      "inverse-on-surface": "#f3f0ef",
+                      "error-container": "#ffdad6",
+                      "status-success": "#10B981",
+                      "on-surface-variant": "#474651",
+                      "background": "#fcf9f8",
+                      "on-error": "#ffffff",
+                      "secondary-container": "#d0e1fb",
+                      "status-error": "#EF4444",
+                      "secondary-fixed": "#d3e4fe",
+                      "on-tertiary-container": "#9fa4a8",
+                      "on-secondary-fixed": "#0b1c30",
+                      "outline-variant": "#c8c5d3",
+                      "tertiary-container": "#353a3d",
+                      "inverse-primary": "#c3c0ff",
+                      "on-secondary-fixed-variant": "#38485d",
+                      "blue-team": "#3B82F6",
+                      "tertiary-fixed-dim": "#c3c7cb",
+                      "secondary": "#505f76",
+                      "outline": "#777682",
+                      "tertiary-fixed": "#dfe3e7",
+                      "status-warning": "#F59E0B",
+                      "on-primary-container": "#9c9af4",
+                      "surface-dim": "#dcd9d9",
+                      "inverse-surface": "#313030",
+                      "surface-variant": "#e5e2e1",
+                      "on-secondary-container": "#54647a",
+                      "error": "#ba1a1a",
+                      "tertiary": "#202528",
+                      "surface-bright": "#fcf9f8",
+                      "surface-container-low": "#f6f3f2",
+                      "bg-page": "#FAFAFA",
+                      "on-tertiary-fixed-variant": "#43474b",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary-fixed": "#100563",
+                      "on-primary-fixed-variant": "#3e3c8f",
+                      "surface-container-highest": "#e5e2e1",
+                      "surface-container": "#f0eded",
+                      "on-surface": "#1c1b1b",
+                      "on-tertiary-fixed": "#171c1f",
+                      "on-background": "#1c1b1b",
+                      "border-subtle": "#E2E8F0",
+                      "on-error-container": "#93000a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "panel-split": "50%",
+                      "margin-mobile": "16px",
+                      "margin-desktop": "32px",
+                      "unit": "4px",
+                      "sidebar-width": "260px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "display-lg-mobile": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-sm": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "JetBrains Mono"
+                      ],
+                      "label-md": [
+                              "JetBrains Mono"
+                      ],
+                      "code-block": [
+                              "JetBrains Mono"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "36px",
+                              {
+                                      "lineHeight": "44px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-sm": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "code-block": [
+                              "14px",
+                              {
+                                      "lineHeight": "22px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .split-resizer {
+            cursor: col-resize;
+            width: 4px;
+            background-color: transparent;
+            transition: background-color 0.2s;
+        }
+        .split-resizer:hover, .split-resizer:active {
+            background-color: #312e81; /* primary-container */
+        }
+        .split-resizer-horizontal {
+            cursor: row-resize;
+            height: 4px;
+            background-color: transparent;
+            transition: background-color 0.2s;
+        }
+        .split-resizer-horizontal:hover, .split-resizer-horizontal:active {
+            background-color: #312e81; /* primary-container */
+        }
+        
+        /* IDE Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAFAFA;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #E2E8F0;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #c8c5d3;
+        }
+      </style>
+</head>
+<body class="bg-bg-page text-on-background font-body-md h-screen w-screen overflow-hidden flex font-body-md">
+<!-- SideNavBar -->
+<nav class="hidden md:flex w-[260px] h-screen fixed left-0 top-0 bg-surface border-r border-border-subtle flex-col py-margin-desktop z-50">
+<div class="px-gutter mb-8">
+<h1 class="font-headline-sm text-headline-sm font-bold text-primary">Placement Mentor</h1>
+<p class="text-secondary font-body-sm text-body-sm mt-1">Ready for Google</p>
+</div>
+<button class="mx-gutter mb-6 bg-primary text-on-primary rounded-lg py-2 px-4 font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined" data-icon="play_arrow">play_arrow</span>
+            Start Practice
+        </button>
+<div class="flex-1 overflow-y-auto">
+<ul class="space-y-1 px-4">
+<li class="">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-secondary hover:bg-surface-container-low transition-colors font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                        Dashboard
+                    </a>
+</li>
+<li class="">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-secondary hover:bg-surface-container-low transition-colors font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="account_tree">account_tree</span>
+                        Skill Graph
+                    </a>
+</li>
+<li class="">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-secondary hover:bg-surface-container-low transition-colors font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="route">route</span>
+                        Roadmap
+                    </a>
+</li>
+<li class="">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-primary font-bold border-r-2 border-primary bg-surface-container-low transition-colors font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="code" style="font-variation-settings: 'FILL' 1;">code</span>
+                        Workspace
+                    </a>
+</li>
+<li class="">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-secondary hover:bg-surface-container-low transition-colors font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="mic">mic</span>
+                        Interviews
+                    </a>
+</li>
+<li class="">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-secondary hover:bg-surface-container-low transition-colors font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
+                        Analytics
+                    </a>
+</li><li class="">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-secondary hover:bg-surface-container-low transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="library_books">library_books</span>
+                        Resource Hub
+                    </a>
+</li>
+<li class="">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-secondary hover:bg-surface-container-low transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+                        ATS Analysis
+                    </a>
+</li>
+</ul>
+</div>
+<div class="mt-auto px-4 border-t border-border-subtle pt-4">
+<ul class="space-y-1">
+<li class="">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-secondary hover:bg-surface-container-low transition-colors font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                        Settings
+                    </a>
+</li>
+<li class="">
+<a class="flex items-center gap-3 px-4 py-2 rounded-lg text-secondary hover:bg-surface-container-low transition-colors font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+                        Support
+                    </a>
+</li>
+</ul>
+</div>
+</nav>
+<!-- TopAppBar -->
+<header class="fixed top-0 right-0 w-full md:w-[calc(100%-260px)] h-16 bg-surface border-b border-border-subtle flex items-center justify-between px-margin-desktop z-40">
+<div class="flex items-center gap-4">
+<div class="md:hidden">
+<button class="p-2 text-secondary hover:bg-surface-container-low rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+<div class="flex items-center bg-bg-page border border-border-subtle rounded-lg px-3 py-1.5 focus-within:ring-2 focus-within:ring-primary transition-shadow w-64">
+<span class="material-symbols-outlined text-secondary mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 p-0 font-body-sm text-body-sm w-full text-on-surface outline-none" placeholder="Search..." type="text">
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container-low rounded-lg transition-colors relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-red-team rounded-full"></span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container-low rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="command_key">find_replace</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container-low rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Main Workspace Area -->
+<main class="mt-16 md:ml-[260px] w-full md:w-[calc(100%-260px)] h-[calc(100vh-64px)] flex bg-bg-page">
+<!-- Left Panel: Problem Statement -->
+<section class="w-1/3 min-w-[300px] h-full flex flex-col bg-surface border-r border-border-subtle overflow-y-auto">
+<!-- Problem Header -->
+<div class="p-4 border-b border-border-subtle bg-[#F1F5F9] sticky top-0 z-10 flex justify-between items-start">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded-sm bg-surface-container-highest text-secondary font-label-sm text-label-sm">Dynamic Programming</span>
+<span class="px-2 py-0.5 rounded-sm bg-error-container text-status-error font-label-sm text-label-sm">Hard</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Subset Sum</h2>
+</div>
+<button class="text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="bookmark_border">bookmark_border</span>
+</button>
+</div>
+<!-- Problem Content -->
+<div class="p-4 space-y-6 font-body-md text-body-md text-on-surface flex-1">
+<p class="">Given an array of non-negative integers <code>arr[]</code> and a value <code>sum</code>, determine if there is a subset of the given set with sum equal to given <code>sum</code>.</p>
+<div class="bg-surface-container-low p-3 rounded-lg border border-border-subtle font-code-block text-code-block">
+<p class="font-bold text-on-surface mb-1">Example 1:</p>
+<p class=""><span class="text-secondary">Input:</span> arr = [3, 34, 4, 12, 5, 2], sum = 9</p>
+<p class=""><span class="text-secondary">Output:</span> True</p>
+<p class=""><span class="text-secondary">Explanation:</span> There is a subset (4, 5) with sum 9.</p>
+</div>
+<div class="bg-surface-container-low p-3 rounded-lg border border-border-subtle font-code-block text-code-block">
+<p class="font-bold text-on-surface mb-1">Example 2:</p>
+<p class=""><span class="text-secondary">Input:</span> arr = [3, 34, 4, 12, 5, 2], sum = 30</p>
+<p class=""><span class="text-secondary">Output:</span> False</p>
+<p class=""><span class="text-secondary">Explanation:</span> There is no subset that add up to 30.</p>
+</div>
+<div>
+<h3 class="font-bold text-on-surface mb-2 font-label-md text-label-md">Constraints:</h3>
+<ul class="list-disc list-inside text-secondary font-code-block text-code-block ml-2">
+<li class="">1 &lt;= arr.length &lt;= 100</li>
+<li class="">1 &lt;= arr[i] &lt;= 100</li>
+<li class="">1 &lt;= sum &lt;= 10^5</li>
+</ul>
+</div>
+</div>
+<!-- Progressive Hints -->
+<div class="p-4 border-t border-border-subtle bg-surface">
+<h3 class="font-label-md text-label-md text-secondary mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="lightbulb">lightbulb</span>
+                    Progressive Hints
+                </h3>
+<div class="space-y-2">
+<details class="group bg-surface-container-low border border-border-subtle rounded-lg">
+<summary class="flex justify-between items-center font-body-sm text-body-sm cursor-pointer list-none p-3 hover:bg-surface-container transition-colors">
+<span class="">Level 1: Base Cases</span>
+<span class="transition group-open:rotate-180 material-symbols-outlined text-[18px]">expand_more</span>
+</summary>
+<div class="text-secondary font-body-sm text-body-sm p-3 pt-0 border-t border-border-subtle">
+                            Think about what happens if the <code>sum</code> is 0. What if the array is empty but the <code>sum</code> is greater than 0?
+                        </div>
+</details>
+<details class="group bg-surface-container-low border border-border-subtle rounded-lg">
+<summary class="flex justify-between items-center font-body-sm text-body-sm cursor-pointer list-none p-3 hover:bg-surface-container transition-colors text-secondary">
+<span class="">Level 2: Recursive Step <span class="text-[10px] ml-2 px-1.5 py-0.5 bg-primary-fixed-dim text-primary rounded-full">-5 XP</span></span>
+<span class="transition group-open:rotate-180 material-symbols-outlined text-[18px]">lock</span>
+</summary>
+</details>
+</div>
+</div>
+<!-- Mastery Impact Preview -->
+<div class="p-4 border-t border-border-subtle bg-[#F1F5F9]">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="trending_up">trending_up</span> Mastery Impact
+                    </span>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex-1">
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="">Dynamic Programming</span>
+<span class="text-status-success">+0.15</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5">
+<div class="bg-primary h-1.5 rounded-full" style="width: 45%"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Vertical Resizer -->
+<div class="split-resizer hidden md:block"></div>
+<!-- Center & Right Panel Container -->
+<section class="flex-1 flex flex-col min-w-[400px] bg-bg-page h-full relative">
+<!-- Code Editor Area -->
+<div class="flex-1 flex flex-col min-h-[300px]">
+<!-- Editor Toolbar -->
+<div class="h-12 bg-[#F1F5F9] border-b border-border-subtle flex items-center justify-between px-4">
+<div class="flex items-center gap-3">
+<select class="bg-surface border border-border-subtle text-on-surface font-label-md text-label-md rounded px-2 py-1 focus:ring-1 focus:ring-primary focus:border-primary outline-none">
+<option value="python">Python 3</option>
+<option value="cpp">C++</option>
+<option value="java">Java</option>
+<option value="js">JavaScript</option>
+</select>
+<button class="text-secondary hover:text-primary transition-colors flex items-center gap-1 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]" data-icon="refresh">refresh</span> Reset
+                        </button>
+</div>
+<div class="flex items-center gap-2">
+<button class="text-secondary hover:text-primary transition-colors p-1 rounded hover:bg-surface-container">
+<span class="material-symbols-outlined text-[18px]" data-icon="settings">settings</span>
+</button>
+<button class="text-secondary hover:text-primary transition-colors p-1 rounded hover:bg-surface-container">
+<span class="material-symbols-outlined text-[18px]" data-icon="fullscreen">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- Monaco Style Editor Mockup -->
+<div class="flex-1 bg-surface font-code-block text-code-block overflow-auto p-4 relative">
+<!-- Line Numbers & Code -->
+<div class="flex">
+<div class="text-on-tertiary-container text-right pr-4 select-none flex flex-col gap-1 w-10 shrink-0 border-r border-border-subtle mr-4">
+<span class="">1</span>
+<span class="">2</span>
+<span class="">3</span>
+<span class="">4</span>
+<span class="">5</span>
+<span class="">6</span>
+<span class="">7</span>
+</div>
+<div class="text-on-surface flex flex-col gap-1 whitespace-pre">
+<span class="text-primary-container">class</span> Solution:
+    <span class="text-primary-container">def</span> <span class="text-blue-team">isSubsetSum</span>(self, N: <span class="text-status-success">int</span>, arr: List[<span class="text-status-success">int</span>], sum: <span class="text-status-success">int</span>) -&gt; <span class="text-status-success">bool</span>:
+        <span class="text-secondary italic"># code here</span>
+<span class="text-primary-container">pass</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Horizontal Resizer -->
+<div class="split-resizer-horizontal"></div>
+<!-- Bottom Panel: Execution Sandbox -->
+<div class="h-1/3 min-h-[200px] flex flex-col bg-surface border-t border-border-subtle z-20">
+<!-- Sandbox Toolbar -->
+<div class="h-12 bg-[#F1F5F9] border-b border-border-subtle flex items-center justify-between px-4">
+<div class="flex gap-4">
+<button class="font-label-md text-label-md text-primary border-b-2 border-primary pb-3 pt-3 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="terminal">terminal</span> Test Results
+                        </button>
+<button class="font-label-md text-label-md text-secondary hover:text-on-surface pb-3 pt-3 transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="edit_note">edit_note</span> Custom Cases
+                        </button>
+</div>
+<div class="flex gap-2">
+<button class="bg-surface border border-border-subtle text-on-surface px-4 py-1.5 rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-colors">
+                            Run
+                        </button>
+<button class="bg-primary text-on-primary px-4 py-1.5 rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors">
+                            Submit
+                        </button>
+</div>
+</div>
+<!-- Test Results Content -->
+<div class="flex-1 overflow-auto p-4 flex flex-col gap-4">
+<!-- Status Header -->
+<div class="flex items-center gap-4 border-b border-border-subtle pb-3">
+<div class="flex items-center gap-2 text-status-success font-headline-sm text-headline-sm">
+<span class="material-symbols-outlined" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            Accepted
+                        </div>
+<div class="flex gap-4 font-label-sm text-label-sm text-secondary ml-auto">
+<span class="bg-surface-container-low px-2 py-1 rounded">Runtime: 12ms</span>
+<span class="bg-surface-container-low px-2 py-1 rounded">Memory: 14.2MB</span>
+</div>
+</div>
+<!-- Test Cases Tabs -->
+<div class="flex gap-2 font-label-sm text-label-sm">
+<button class="px-3 py-1 bg-surface-container-highest rounded-md flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span> Case 1
+                        </button>
+<button class="px-3 py-1 hover:bg-surface-container rounded-md text-secondary flex items-center gap-1 transition-colors">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span> Case 2
+                        </button>
+<button class="px-3 py-1 hover:bg-surface-container rounded-md text-secondary flex items-center gap-1 transition-colors">
+<span class="w-1.5 h-1.5 rounded-full bg-status-success"></span> Case 3
+                        </button>
+</div>
+<!-- Selected Test Case Details -->
+<div class="space-y-3 font-code-block text-code-block text-body-sm">
+<div>
+<span class="text-secondary mb-1 block">Input:</span>
+<div class="bg-surface-container-low p-2 rounded border border-border-subtle">
+                                N = 6, arr = [3, 34, 4, 12, 5, 2], sum = 9
+                            </div>
+</div>
+<div>
+<span class="text-secondary mb-1 block">Output:</span>
+<div class="bg-surface-container-low p-2 rounded border border-border-subtle">
+                                True
+                            </div>
+</div>
+<div>
+<span class="text-secondary mb-1 block">Expected:</span>
+<div class="bg-surface-container-low p-2 rounded border border-border-subtle">
+                                True
+                            </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Socratic Debugger Widget (Collapsed) -->
+<div class="absolute bottom-4 right-4 z-30">
+<button class="bg-surface border border-border-subtle shadow-[0px_4px_12px_rgba(0,0,0,0.05)] rounded-full h-12 w-12 flex items-center justify-center text-primary hover:bg-surface-container-low transition-colors group relative">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+<!-- Tooltip -->
+<div class="absolute bottom-full mb-2 right-0 bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                        Socratic Debugger
+                    </div>
+<!-- Notification Dot -->
+<span class="absolute top-0 right-0 w-3 h-3 bg-blue-team border-2 border-surface rounded-full"></span>
+</button>
+</div>
+</section>
+</main>
+
+
+</body></html>

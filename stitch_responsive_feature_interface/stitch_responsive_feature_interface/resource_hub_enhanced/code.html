@@ -1,0 +1,422 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Resource Hub - Placement Mentor 2.0</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "blue-team": "#3B82F6",
+                        "tertiary-fixed-dim": "#c3c7cb",
+                        "on-error": "#ffffff",
+                        "on-background": "#1c1b1b",
+                        "outline-variant": "#c8c5d3",
+                        "surface-tint": "#5654a8",
+                        "secondary-container": "#d0e1fb",
+                        "tertiary-fixed": "#dfe3e7",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "outline": "#777682",
+                        "status-warning": "#F59E0B",
+                        "on-surface-variant": "#474651",
+                        "on-tertiary-container": "#9fa4a8",
+                        "primary": "#1a146b",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "tertiary": "#202528",
+                        "primary-fixed": "#e2dfff",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "surface-bright": "#fcf9f8",
+                        "inverse-surface": "#313030",
+                        "on-secondary-container": "#54647a",
+                        "on-primary-fixed": "#100563",
+                        "bg-page": "#FAFAFA",
+                        "surface": "#fcf9f8",
+                        "status-error": "#EF4444",
+                        "surface-container-low": "#f6f3f2",
+                        "surface-container": "#f0eded",
+                        "background": "#fcf9f8",
+                        "red-team": "#DC2626",
+                        "on-tertiary-fixed-variant": "#43474b",
+                        "inverse-primary": "#c3c0ff",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#d3e4fe",
+                        "border-subtle": "#E2E8F0",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#3e3c8f",
+                        "on-primary-container": "#9c9af4",
+                        "on-tertiary-fixed": "#171c1f",
+                        "primary-container": "#312e81",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-secondary-fixed": "#0b1c30",
+                        "on-tertiary": "#ffffff",
+                        "secondary": "#505f76",
+                        "surface-variant": "#e5e2e1",
+                        "surface-container-high": "#eae7e7",
+                        "tertiary-container": "#353a3d",
+                        "error": "#ba1a1a",
+                        "on-surface": "#1c1b1b",
+                        "bg-surface": "#FFFFFF",
+                        "status-success": "#10B981",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f3f0ef",
+                        "surface-dim": "#dcd9d9",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "panel-split": "50%",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "32px",
+                        "gutter": "24px",
+                        "sidebar-width": "260px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Hanken Grotesk"],
+                        "code-block": ["JetBrains Mono"],
+                        "headline-sm": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "display-lg-mobile": ["Hanken Grotesk"],
+                        "label-md": ["JetBrains Mono"],
+                        "label-sm": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "code-block": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Utility for hiding scrollbar but allowing scroll */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+<body class="bg-bg-page text-on-surface font-body-md text-body-md h-screen overflow-hidden flex selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- SideNavBar -->
+<nav class="hidden md:flex w-[260px] h-screen fixed left-0 top-0 bg-surface dark:bg-on-background border-r border-border-subtle dark:border-outline-variant flex-col py-margin-desktop z-50">
+<div class="px-gutter mb-8 flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center font-bold">PM</div>
+<div>
+<div class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed leading-tight">Placement Mentor</div>
+<div class="font-label-sm text-label-sm text-secondary">Ready for Google</div>
+</div>
+</div>
+<button class="mx-gutter mb-6 px-4 py-2 bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm">
+            Start Practice
+        </button>
+<div class="flex-1 overflow-y-auto no-scrollbar px-3 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-secondary hover:bg-surface-container-low transition-colors group" href="#">
+<span class="material-symbols-outlined text-xl group-hover:text-primary transition-colors">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-secondary hover:bg-surface-container-low transition-colors group" href="#">
+<span class="material-symbols-outlined text-xl group-hover:text-primary transition-colors">account_tree</span>
+<span class="font-label-md text-label-md">Skill Graph</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-secondary hover:bg-surface-container-low transition-colors group" href="#">
+<span class="material-symbols-outlined text-xl group-hover:text-primary transition-colors">route</span>
+<span class="font-label-md text-label-md">Roadmap</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-secondary hover:bg-surface-container-low transition-colors group" href="#">
+<span class="material-symbols-outlined text-xl group-hover:text-primary transition-colors">code</span>
+<span class="font-label-md text-label-md">Workspace</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-secondary hover:bg-surface-container-low transition-colors group" href="#">
+<span class="material-symbols-outlined text-xl group-hover:text-primary transition-colors">mic</span>
+<span class="font-label-md text-label-md">Interviews</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-secondary hover:bg-surface-container-low transition-colors group" href="#">
+<span class="material-symbols-outlined text-xl group-hover:text-primary transition-colors">query_stats</span>
+<span class="font-label-md text-label-md">Analytics</span>
+</a>
+<!-- Manually added Resources active state based on prompt intent if it were in the JSON array, but since it's not, we'll add it to match prompt context. -->
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-secondary hover:bg-surface-container-low transition-colors group" href="#">
+<span class="material-symbols-outlined text-xl group-hover:text-primary transition-colors">description</span>
+<span class="font-label-md text-label-md">ATS Analysis</span>
+</a><a class="flex items-center gap-3 px-3 py-2 rounded-lg text-primary dark:text-primary-fixed font-bold border-r-2 border-primary dark:border-primary-fixed bg-surface-container-low group" href="#">
+<span class="material-symbols-outlined text-xl fill text-primary">library_books</span>
+<span class="font-label-md text-label-md">Resource Hub</span>
+</a>
+</div>
+<div class="mt-auto px-3 flex flex-col gap-1 border-t border-border-subtle pt-4 mx-3">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-secondary hover:bg-surface-container-low transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-secondary hover:bg-surface-container-low transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">help</span>
+<span class="font-label-md text-label-md">Support</span>
+</a>
+</div>
+</nav>
+<!-- TopAppBar -->
+<header class="hidden md:flex fixed top-0 right-0 w-[calc(100%-260px)] h-16 bg-surface dark:bg-on-background border-b border-border-subtle dark:border-outline-variant items-center justify-between px-margin-desktop z-40">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-96">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-lg">search</span>
+<input class="w-full pl-10 pr-4 py-1.5 bg-bg-page border border-border-subtle rounded-md font-body-sm text-body-sm focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all placeholder:text-secondary-fixed-dim" placeholder="Search resources, topics..." type="text">
+<div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1 opacity-50">
+<span class="material-symbols-outlined text-sm">keyboard_command_key</span>
+<span class="font-code-block text-code-block text-xs">K</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<button class="hover:text-primary transition-colors relative w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-container-low">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-red-team rounded-full border-2 border-surface"></span>
+</button>
+<button class="hover:text-primary transition-colors w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-container-low">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-[260px] md:mt-16 overflow-y-auto w-full">
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop py-8 flex flex-col gap-8">
+<!-- Page Header & Controls -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-border-subtle pb-6">
+<div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-2">Resource Hub</h1>
+<p class="font-body-lg text-body-lg text-secondary">Curated technical materials to accelerate your roadmap.</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="relative">
+<select class="appearance-none bg-surface border border-border-subtle rounded-lg py-2 pl-4 pr-10 font-label-md text-label-md text-on-surface focus:ring-2 focus:ring-primary focus:border-primary outline-none cursor-pointer">
+<option>Web Development</option>
+<option>ML/Data Science</option>
+<option>Backend Systems</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-secondary pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Bento Grid Layout for Topics & Map -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Competency Map Panel -->
+<div class="lg:col-span-8 bg-surface border border-border-subtle rounded-xl p-6 flex flex-col relative overflow-hidden">
+<div class="flex justify-between items-center mb-6 relative z-10">
+<h2 class="font-headline-md text-headline-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">schema</span>
+                            Competency Map
+                        </h2>
+<button class="text-secondary hover:text-primary font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+                            Expand <span class="material-symbols-outlined text-[16px]">open_in_full</span>
+</button>
+</div>
+<!-- Faux Map Visualization -->
+<div class="flex-1 min-h-[300px] relative flex items-center justify-center bg-bg-page rounded-lg border border-border-subtle border-dashed p-4">
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, #1a146b 1px, transparent 0); background-size: 24px 24px;"></div>
+<div class="relative w-full h-full max-w-2xl flex items-center justify-center">
+<!-- SVG lines connecting nodes -->
+<svg class="absolute inset-0 w-full h-full" style="z-index: 1;">
+<path d="M 150 150 L 300 80 M 150 150 L 300 220 M 300 80 L 450 80 M 300 220 L 450 220" fill="none" stroke="#E2E8F0" stroke-width="2"></path>
+</svg>
+<!-- Nodes -->
+<div class="absolute left-[10%] top-1/2 -translate-y-1/2 z-10 bg-surface px-4 py-2 rounded-full border-2 border-status-success text-status-success font-label-md text-label-md flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-sm">check_circle</span> Fundamentals
+                            </div>
+<div class="absolute left-[45%] top-[20%] z-10 bg-surface px-4 py-2 rounded-full border border-primary-container bg-primary-container text-on-primary-container font-label-md text-label-md shadow-sm">
+                                React Ecosystem
+                            </div>
+<div class="absolute left-[45%] top-[70%] z-10 bg-surface px-4 py-2 rounded-full border border-border-subtle text-on-surface font-label-md text-label-md shadow-sm">
+                                State Management
+                            </div>
+<div class="absolute left-[80%] top-[20%] z-10 bg-surface px-4 py-2 rounded-full border border-status-warning text-status-warning font-label-md text-label-md border-dashed shadow-sm">
+                                Next.js
+                            </div>
+<div class="absolute left-[80%] top-[70%] z-10 bg-surface px-4 py-2 rounded-full border border-border-subtle text-secondary font-label-md text-label-md border-dashed shadow-sm">
+                                Redux/Zustand
+                            </div>
+</div>
+</div>
+</div>
+<!-- Resource Track List -->
+<div class="lg:col-span-4 bg-surface border border-border-subtle rounded-xl flex flex-col h-full max-h-[420px]">
+<div class="p-4 border-b border-border-subtle bg-[#F1F5F9] rounded-t-xl">
+<h3 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-lg">format_list_bulleted</span>
+                            Web Dev Track
+                        </h3>
+</div>
+<div class="flex-1 overflow-y-auto no-scrollbar p-2">
+<ul class="flex flex-col gap-1">
+<li class="">
+<button class="w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between hover:bg-surface-container-low transition-colors group">
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary">HTML &amp; CSS Masterclass</span>
+<span class="material-symbols-outlined text-status-success text-sm">check_circle</span>
+</button>
+</li>
+<li class="">
+<button class="w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between hover:bg-surface-container-low transition-colors group">
+<span class="font-body-sm text-body-sm text-on-surface group-hover:text-primary">JavaScript Core</span>
+<span class="material-symbols-outlined text-status-success text-sm">check_circle</span>
+</button>
+</li>
+<li class="">
+<button class="w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between bg-primary-fixed border border-primary-fixed-dim group">
+<span class="font-body-sm text-body-sm text-on-primary-fixed font-medium">React Fundamentals</span>
+<span class="material-symbols-outlined text-primary text-sm">arrow_forward_ios</span>
+</button>
+</li>
+<li class="">
+<button class="w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between hover:bg-surface-container-low transition-colors group">
+<span class="font-body-sm text-body-sm text-secondary group-hover:text-on-surface">Git &amp; Version Control</span>
+</button>
+</li>
+<li class="">
+<button class="w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between hover:bg-surface-container-low transition-colors group">
+<span class="font-body-sm text-body-sm text-secondary group-hover:text-on-surface">HTTP &amp; APIs</span>
+</button>
+</li>
+<li class="">
+<button class="w-full text-left px-3 py-2.5 rounded-lg flex items-center justify-between hover:bg-surface-container-low transition-colors group">
+<span class="font-body-sm text-body-sm text-secondary group-hover:text-on-surface">Backend Integration</span>
+</button>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Curated Resources Section -->
+<div class="mt-4">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-headline-md text-headline-md text-on-surface">Curated for React Fundamentals</h2>
+<div class="flex gap-2">
+<button class="px-3 py-1 bg-surface border border-border-subtle rounded text-label-sm font-label-sm text-on-surface hover:bg-surface-container-low">All Types</button>
+<button class="px-3 py-1 bg-surface border border-border-subtle rounded text-label-sm font-label-sm text-secondary hover:bg-surface-container-low">Video</button>
+<button class="px-3 py-1 bg-surface border border-border-subtle rounded text-label-sm font-label-sm text-secondary hover:bg-surface-container-low">Docs</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<!-- Resource Card 1 -->
+<div class="bg-surface border border-border-subtle rounded-xl p-5 flex flex-col h-full hover:border-primary-fixed-dim transition-colors group">
+<div class="flex justify-between items-start mb-3">
+<span class="px-2 py-0.5 bg-secondary-container text-on-secondary-container rounded text-[10px] font-label-sm uppercase tracking-wider">React Hooks</span>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[16px]">smart_display</span>
+<span class="font-label-sm text-label-sm text-[11px]">Video • 45m</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 group-hover:text-primary transition-colors">Advanced useEffect Patterns</h3>
+<p class="font-body-sm text-body-sm text-secondary line-clamp-2 mb-4 flex-1">
+                            Deep dive into managing side effects, cleanup functions, and avoiding common dependency array pitfalls in modern React applications.
+                        </p>
+<div class="bg-surface-container-low border border-border-subtle rounded-lg p-3 mb-4">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-status-warning text-[16px] mt-0.5">lightbulb</span>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface block mb-0.5">Why Recommended</span>
+<span class="font-body-sm text-body-sm text-secondary text-[12px] leading-tight">Addresses your recent struggle with infinite loops in the Workspace PTG.</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-border-subtle">
+<span class="font-label-sm text-label-sm text-secondary">Frontend Masters</span>
+<button class="flex items-center gap-1 text-primary font-label-md text-label-md hover:text-primary-container transition-colors">
+                                Open <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Resource Card 2 -->
+<div class="bg-surface border border-border-subtle rounded-xl p-5 flex flex-col h-full hover:border-primary-fixed-dim transition-colors group">
+<div class="flex justify-between items-start mb-3">
+<span class="px-2 py-0.5 bg-primary-fixed text-on-primary-fixed rounded text-[10px] font-label-sm uppercase tracking-wider">State Management</span>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[16px]">description</span>
+<span class="font-label-sm text-label-sm text-[11px]">Docs • 20m</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 group-hover:text-primary transition-colors">Thinking in React</h3>
+<p class="font-body-sm text-body-sm text-secondary line-clamp-2 mb-4 flex-1">
+                            The official guide on how to break down a UI into a component hierarchy and determine where state should live.
+                        </p>
+<div class="bg-surface-container-low border border-border-subtle rounded-lg p-3 mb-4">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-blue-team text-[16px] mt-0.5">fact_check</span>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface block mb-0.5">Core Prerequisite</span>
+<span class="font-body-sm text-body-sm text-secondary text-[12px] leading-tight">Essential reading before attempting the 'Build a Kanban Board' project.</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-border-subtle">
+<span class="font-label-sm text-label-sm text-secondary">React.dev</span>
+<button class="flex items-center gap-1 text-primary font-label-md text-label-md hover:text-primary-container transition-colors">
+                                Read <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Resource Card 3 -->
+<div class="bg-surface border border-border-subtle rounded-xl p-5 flex flex-col h-full hover:border-primary-fixed-dim transition-colors group">
+<div class="flex justify-between items-start mb-3">
+<span class="px-2 py-0.5 bg-surface-variant text-on-surface-variant rounded text-[10px] font-label-sm uppercase tracking-wider">Performance</span>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[16px]">article</span>
+<span class="font-label-sm text-label-sm text-[11px]">Blog • 15m</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 group-hover:text-primary transition-colors">A (Complete) Guide to useMemo</h3>
+<p class="font-body-sm text-body-sm text-secondary line-clamp-2 mb-4 flex-1">
+                            Understand exactly when and why to use useMemo and useCallback to optimize expensive renders, and when they actually hurt performance.
+                        </p>
+<div class="bg-surface-container-low border border-border-subtle rounded-lg p-3 mb-4 opacity-50">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px] mt-0.5">trending_up</span>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface block mb-0.5">Next Level</span>
+<span class="font-body-sm text-body-sm text-secondary text-[12px] leading-tight">Recommended after mastering basic state management.</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-auto pt-4 border-t border-border-subtle">
+<span class="font-label-sm text-label-sm text-secondary">Kent C. Dodds</span>
+<button class="flex items-center gap-1 text-primary font-label-md text-label-md hover:text-primary-container transition-colors">
+                                Read <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+
+</body></html>

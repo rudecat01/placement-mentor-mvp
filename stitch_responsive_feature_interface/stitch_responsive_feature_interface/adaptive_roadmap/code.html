@@ -1,0 +1,393 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Placement Mentor 2.0 - Adaptive Roadmap</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=Inter:wght@400;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#c3c0ff",
+                    "surface": "#fcf9f8",
+                    "secondary-fixed-dim": "#b7c8e1",
+                    "red-team": "#DC2626",
+                    "on-primary": "#ffffff",
+                    "primary-fixed": "#e2dfff",
+                    "on-secondary": "#ffffff",
+                    "surface-tint": "#5654a8",
+                    "primary": "#1a146b",
+                    "bg-surface": "#FFFFFF",
+                    "primary-container": "#312e81",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-high": "#eae7e7",
+                    "inverse-on-surface": "#f3f0ef",
+                    "error-container": "#ffdad6",
+                    "status-success": "#10B981",
+                    "on-surface-variant": "#474651",
+                    "background": "#fcf9f8",
+                    "on-error": "#ffffff",
+                    "secondary-container": "#d0e1fb",
+                    "status-error": "#EF4444",
+                    "secondary-fixed": "#d3e4fe",
+                    "on-tertiary-container": "#9fa4a8",
+                    "on-secondary-fixed": "#0b1c30",
+                    "outline-variant": "#c8c5d3",
+                    "tertiary-container": "#353a3d",
+                    "inverse-primary": "#c3c0ff",
+                    "on-secondary-fixed-variant": "#38485d",
+                    "blue-team": "#3B82F6",
+                    "tertiary-fixed-dim": "#c3c7cb",
+                    "secondary": "#505f76",
+                    "outline": "#777682",
+                    "tertiary-fixed": "#dfe3e7",
+                    "status-warning": "#F59E0B",
+                    "on-primary-container": "#9c9af4",
+                    "surface-dim": "#dcd9d9",
+                    "inverse-surface": "#313030",
+                    "surface-variant": "#e5e2e1",
+                    "on-secondary-container": "#54647a",
+                    "error": "#ba1a1a",
+                    "tertiary": "#202528",
+                    "surface-bright": "#fcf9f8",
+                    "surface-container-low": "#f6f3f2",
+                    "bg-page": "#FAFAFA",
+                    "on-tertiary-fixed-variant": "#43474b",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed": "#100563",
+                    "on-primary-fixed-variant": "#3e3c8f",
+                    "surface-container-highest": "#e5e2e1",
+                    "surface-container": "#f0eded",
+                    "on-surface": "#1c1b1b",
+                    "on-tertiary-fixed": "#171c1f",
+                    "on-background": "#1c1b1b",
+                    "border-subtle": "#E2E8F0",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "panel-split": "50%",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "32px",
+                    "unit": "4px",
+                    "sidebar-width": "260px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Hanken Grotesk"],
+                    "display-lg-mobile": ["Hanken Grotesk"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "headline-sm": ["Hanken Grotesk"],
+                    "body-sm": ["Inter"],
+                    "label-sm": ["JetBrains Mono"],
+                    "label-md": ["JetBrains Mono"],
+                    "code-block": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "code-block": ["14px", {"lineHeight": "22px", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="bg-bg-page text-on-background font-body-md min-h-screen flex">
+<!-- SideNavBar -->
+<nav class="hidden md:flex flex-col h-full py-margin-desktop bg-surface dark:bg-on-background w-[260px] h-screen fixed left-0 top-0 border-r border-border-subtle dark:border-outline-variant z-50 flat no shadows">
+<div class="px-gutter mb-8">
+<h1 class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed">Placement Mentor</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-1">Ready for Google</p>
+</div>
+<div class="flex-grow">
+<ul class="space-y-2">
+<li class="">
+<a class="flex items-center px-gutter py-3 text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-low dark:hover:bg-tertiary-container transition-colors font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined mr-4">dashboard</span>
+                        Dashboard
+                    </a>
+</li>
+<li class="">
+<a class="flex items-center px-gutter py-3 text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-low dark:hover:bg-tertiary-container transition-colors font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined mr-4">account_tree</span>
+                        Skill Graph
+                    </a>
+</li>
+<li class="">
+<a class="flex items-center px-gutter py-3 text-primary dark:text-primary-fixed font-bold border-r-2 border-primary dark:border-primary-fixed bg-surface-container-low font-body-md text-body-md scale-[0.98] transition-transform" href="#">
+<span class="material-symbols-outlined mr-4">route</span>
+                        Roadmap
+                    </a>
+</li><li class="">
+<a class="flex items-center px-gutter py-3 text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-low dark:hover:bg-tertiary-container transition-colors font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined mr-4">library_books</span>
+                        Resource Hub
+                    </a>
+</li>
+<li class="">
+<a class="flex items-center px-gutter py-3 text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-low dark:hover:bg-tertiary-container transition-colors font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined mr-4">code</span>
+                        Workspace
+                    </a>
+</li>
+<li class="">
+<a class="flex items-center px-gutter py-3 text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-low dark:hover:bg-tertiary-container transition-colors font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined mr-4">mic</span>
+                        Interviews
+                    </a>
+</li><li class="">
+<a class="flex items-center px-gutter py-3 text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-low dark:hover:bg-tertiary-container transition-colors font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined mr-4">description</span>
+                        ATS Analysis
+                    </a>
+</li>
+<li class="">
+<a class="flex items-center px-gutter py-3 text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-low dark:hover:bg-tertiary-container transition-colors font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined mr-4">query_stats</span>
+                        Analytics
+                    </a>
+</li>
+</ul>
+</div>
+<div class="px-gutter mt-auto">
+<button class="w-full bg-primary text-on-primary py-2 rounded-DEFAULT font-label-md text-label-md mb-6 hover:bg-primary-container transition-colors">Start Practice</button>
+<ul class="space-y-2 border-t border-border-subtle pt-4">
+<li class="">
+<a class="flex items-center text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-low dark:hover:bg-tertiary-container transition-colors py-2 font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined mr-4">settings</span>
+                        Settings
+                    </a>
+</li>
+<li class="">
+<a class="flex items-center text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-low dark:hover:bg-tertiary-container transition-colors py-2 font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined mr-4">help</span>
+                        Support
+                    </a>
+</li>
+</ul>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 ml-[0px] md:ml-[260px] min-h-screen flex flex-col relative pt-16">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-on-background fixed top-0 right-0 w-[calc(100%-260px)] h-16 border-b border-border-subtle dark:border-outline-variant flat no shadows flex items-center justify-between px-margin-desktop z-40 hidden md:flex">
+<div class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed">Placement Mentor 2.0</div>
+<div class="flex-1 max-w-md mx-8 relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-low border border-border-subtle rounded-DEFAULT font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-fixed" placeholder="Search resources..." type="text">
+</div>
+<div class="flex items-center space-x-4">
+<button class="text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors Focus: ring-2 ring-primary dark:ring-primary-fixed rounded-full p-1">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors Focus: ring-2 ring-primary dark:ring-primary-fixed rounded-full p-1 hidden lg:block">
+<span class="material-symbols-outlined">find_replace</span>
+</button>
+<button class="text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors Focus: ring-2 ring-primary dark:ring-primary-fixed rounded-full p-1">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Content -->
+<div class="p-gutter max-w-[1200px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-gutter mt-6">
+<!-- Left Column: Main Timeline -->
+<div class="lg:col-span-8 flex flex-col gap-6">
+<!-- Header / Progress -->
+<div class="bg-surface border border-border-subtle rounded-lg p-6">
+<div class="flex justify-between items-end mb-4">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-background">Day 42: Algorithm Optimization</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Focus: Hashing &amp; System Design Fundamentals</p>
+</div>
+<div class="text-right">
+<div class="font-headline-sm text-headline-sm text-primary">45 / 120 min</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Daily Budget Used</p>
+</div>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden relative">
+<div class="absolute top-0 left-0 h-full bg-primary rounded-full transition-all duration-500" style="width: 37.5%;"></div>
+<div class="absolute top-0 left-[37.5%] h-full bg-primary-fixed-dim rounded-r-full transition-all duration-500 opacity-50" style="width: 12.5%;"></div>
+</div>
+<div class="flex justify-between mt-2 font-label-sm text-label-sm text-on-surface-variant">
+<span class="">Started 08:00 AM</span>
+<span class="">Estimated Finish 10:15 AM</span>
+</div>
+</div>
+<!-- Timeline / Task List -->
+<div class="flex flex-col relative before:absolute before:inset-y-0 before:left-4 before:w-[2px] before:bg-border-subtle ml-2">
+<!-- Task 1: Completed -->
+<div class="relative pl-12 py-4 group">
+<div class="absolute left-2 top-6 w-5 h-5 rounded-full bg-status-success border-2 border-surface flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-[12px] text-surface font-bold">check</span>
+</div>
+<div class="bg-surface border border-border-subtle rounded-DEFAULT p-4 hover:border-outline-variant transition-colors opacity-75">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider bg-surface-container-high text-on-surface-variant">Revision</span>
+<h3 class="font-body-md text-body-md font-semibold line-through text-on-surface-variant">Graph Traversals (BFS/DFS)</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">15 min</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 mb-2">Review core patterns before tackling advanced network problems.</p>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-status-success">
+<span class="material-symbols-outlined text-[14px]">psychology</span>
+<span class="">Targeting weak prerequisite</span>
+</div>
+</div>
+</div>
+<!-- Task 2: Active -->
+<div class="relative pl-12 py-4 group">
+<div class="absolute left-2 top-6 w-5 h-5 rounded-full bg-surface border-2 border-primary flex items-center justify-center z-10 shadow-[0_0_0_4px_rgba(26,20,107,0.1)]">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+</div>
+<div class="bg-surface border-2 border-primary rounded-DEFAULT p-4 shadow-sm relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider bg-primary-container text-on-primary">DSA Practice</span>
+<h3 class="font-body-md text-body-md font-semibold">LRU Cache Implementation</h3>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">45 min</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 mb-3">Design and implement a data structure for Least Recently Used (LRU) cache.</p>
+<div class="flex items-center justify-between mt-4 p-3 bg-surface-container-low rounded-DEFAULT border border-border-subtle">
+<div class="flex items-center gap-2 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[16px] text-status-warning">bolt</span>
+<span class="">Difficulty: Hard</span>
+</div>
+<button class="px-4 py-1.5 bg-primary text-on-primary rounded font-label-sm text-label-sm hover:bg-primary-container transition-colors">Resume Coding</button>
+</div>
+</div>
+</div>
+<!-- Task 3: Upcoming -->
+<div class="relative pl-12 py-4 group">
+<div class="absolute left-2 top-6 w-5 h-5 rounded-full bg-surface border-2 border-border-subtle z-10"></div>
+<div class="bg-surface border border-border-subtle rounded-DEFAULT p-4 hover:border-outline-variant transition-colors">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider bg-secondary-container text-on-secondary-fixed">Role Learning</span>
+<h3 class="font-body-md text-body-md font-semibold">Load Balancing Strategies</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">30 min</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 mb-2">System design core concept crucial for backend roles.</p>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+<span class="">Aligns with target role: Backend SWE</span>
+</div>
+</div>
+</div>
+<!-- Task 4: Upcoming -->
+<div class="relative pl-12 py-4 group">
+<div class="absolute left-2 top-6 w-5 h-5 rounded-full bg-surface border-2 border-border-subtle z-10"></div>
+<div class="bg-surface border border-border-subtle rounded-DEFAULT p-4 hover:border-outline-variant transition-colors">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider bg-[#FEE2E2] text-red-team">Interview</span>
+<h3 class="font-body-md text-body-md font-semibold">Mock: Behavioral (Amazon LP)</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">30 min</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 mb-2">Practice 'Tell me about a time you failed' using STAR method.</p>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-secondary">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span class="">High yield for upcoming Amazon loop</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Context Panels -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<!-- Upcoming Milestones Bento Box -->
+<div class="bg-surface border border-border-subtle rounded-lg p-5">
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">flag</span>
+                        Milestones
+                    </h3>
+<div class="space-y-4">
+<div class="flex items-start gap-3">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-on-surface-variant font-label-sm text-label-sm font-bold shrink-0">D3</div>
+<div>
+<h4 class="font-label-md text-label-md font-semibold">Google OA Simulation</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">In 3 days • Need 80% completion in Arrays</p>
+</div>
+</div>
+<div class="flex items-start gap-3 opacity-60">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-on-surface-variant font-label-sm text-label-sm font-bold shrink-0">D14</div>
+<div>
+<h4 class="font-label-md text-label-md font-semibold">System Design Mock</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">In 14 days • Pending HLD module</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Revision Priority Glassy-ish Panel -->
+<div class="bg-surface border border-border-subtle rounded-lg p-5 relative overflow-hidden">
+<!-- Subtle background pattern/gradient to look technical -->
+<div class="absolute inset-0 bg-gradient-to-br from-surface to-surface-container-low opacity-50 z-0"></div>
+<div class="relative z-10">
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-status-warning">warning</span>
+                            At-Risk Concepts
+                        </h3>
+<ul class="space-y-3">
+<li class="flex justify-between items-center pb-2 border-b border-border-subtle">
+<span class="font-body-sm text-body-sm">Dynamic Programming (1D)</span>
+<span class="font-label-sm text-label-sm text-status-error font-bold">42% Mastery</span>
+</li>
+<li class="flex justify-between items-center pb-2 border-b border-border-subtle">
+<span class="font-body-sm text-body-sm">Consistent Hashing</span>
+<span class="font-label-sm text-label-sm text-status-warning font-bold">68% Mastery</span>
+</li>
+<li class="flex justify-between items-center">
+<span class="font-body-sm text-body-sm">Trie Data Structure</span>
+<span class="font-label-sm text-label-sm text-status-warning font-bold">71% Mastery</span>
+</li>
+</ul>
+<button class="w-full mt-4 py-2 bg-surface text-primary border border-border-subtle rounded font-label-md text-label-md hover:bg-surface-container-low transition-colors">Inject into tomorrow's plan</button>
+</div>
+</div>
+<!-- Mini Skill Graph Preview (Decorative/Contextual) -->
+<div class="bg-surface border border-border-subtle rounded-lg p-5 flex flex-col items-center justify-center min-h-[160px]">
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-2">Current Trajectory</p>
+<div class="w-full h-[100px] relative">
+<!-- Simplified visual representation of DAG -->
+<div class="absolute top-[20%] left-[20%] w-3 h-3 rounded-full bg-status-success shadow-[0_0_8px_rgba(16,185,129,0.5)]"></div>
+<div class="absolute top-[50%] left-[40%] w-3 h-3 rounded-full bg-status-success shadow-[0_0_8px_rgba(16,185,129,0.5)]"></div>
+<div class="absolute top-[30%] left-[60%] w-3 h-3 rounded-full bg-primary shadow-[0_0_8px_rgba(26,20,107,0.5)] animate-pulse"></div>
+<div class="absolute top-[70%] left-[70%] w-3 h-3 rounded-full bg-surface-container-high border border-outline"></div>
+<!-- Edges -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<line stroke="#E2E8F0" stroke-width="1" x1="20%" x2="40%" y1="20%" y2="50%"></line>
+<line stroke="#E2E8F0" stroke-width="1" x1="40%" x2="60%" y1="50%" y2="30%"></line>
+<line stroke="#E2E8F0" stroke-dasharray="2 2" stroke-width="1" x1="60%" x2="70%" y1="30%" y2="70%"></line>
+</svg>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+
+</body></html>

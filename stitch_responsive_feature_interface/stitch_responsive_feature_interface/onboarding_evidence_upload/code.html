@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Placement Mentor 2.0 - Onboarding</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#3e3c8f",
+                        "on-secondary-fixed": "#0b1c30",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#dfe3e7",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#9fa4a8",
+                        "secondary-fixed": "#d3e4fe",
+                        "bg-surface": "#FFFFFF",
+                        "primary-fixed": "#e2dfff",
+                        "inverse-primary": "#c3c0ff",
+                        "on-primary-fixed": "#100563",
+                        "surface-container-low": "#f6f3f2",
+                        "secondary-container": "#d0e1fb",
+                        "status-error": "#EF4444",
+                        "blue-team": "#3B82F6",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#54647a",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#fcf9f8",
+                        "primary-container": "#312e81",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "outline": "#777682",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#202528",
+                        "error": "#ba1a1a",
+                        "status-success": "#10B981",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#43474b",
+                        "surface": "#fcf9f8",
+                        "border-subtle": "#E2E8F0",
+                        "on-primary": "#ffffff",
+                        "red-team": "#DC2626",
+                        "secondary": "#505f76",
+                        "surface-variant": "#e5e2e1",
+                        "on-surface-variant": "#474651",
+                        "bg-page": "#FAFAFA",
+                        "tertiary-container": "#353a3d",
+                        "inverse-surface": "#313030",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "outline-variant": "#c8c5d3",
+                        "on-surface": "#1c1b1b",
+                        "surface-tint": "#5654a8",
+                        "on-primary-container": "#9c9af4",
+                        "surface-container": "#f0eded",
+                        "primary": "#1a146b",
+                        "tertiary-fixed-dim": "#c3c7cb",
+                        "on-tertiary-fixed": "#171c1f",
+                        "inverse-on-surface": "#f3f0ef",
+                        "status-warning": "#F59E0B",
+                        "background": "#fcf9f8",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-dim": "#dcd9d9",
+                        "surface-container-high": "#eae7e7",
+                        "on-background": "#1c1b1b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "panel-split": "50%",
+                        "unit": "4px",
+                        "margin-desktop": "32px",
+                        "margin-mobile": "16px",
+                        "sidebar-width": "260px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["JetBrains Mono"],
+                        "display-lg-mobile": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["JetBrains Mono"],
+                        "code-block": ["JetBrains Mono"],
+                        "body-sm": ["Inter"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-sm": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "code-block": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #E2E8F0;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #c8c5d3;
+        }
+    </style>
+</head>
+<!-- Note: Shared Components Navigation (TopAppBar, SideNavBar, BottomNavBar) are SUPPRESSED here 
+     in accordance with the Semantic Shell Mandate: "Automatic Suppression: You MUST exclude 
+     the navigation shell if the page intent is: Linear/Transactional: Login, Sign-up, Onboarding..." -->
+<body class="bg-page text-on-surface font-body-md antialiased min-h-screen flex flex-col md:flex-row overflow-hidden">
+<!-- Onboarding Progress Sidebar (Custom for Transactional Flow) -->
+<aside class="w-full md:w-[280px] lg:w-[320px] bg-bg-surface border-b md:border-b-0 md:border-r border-border-subtle flex-shrink-0 flex flex-col">
+<div class="p-6 md:p-8 border-b border-border-subtle">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined filled text-primary text-3xl">drive_file_rename_outline</span>
+<span class="font-headline-sm text-headline-sm text-primary">Placement Mentor</span>
+</div>
+</div>
+<div class="p-6 md:p-8 flex-1 overflow-y-auto hidden md:block">
+<h2 class="font-label-sm text-label-sm text-secondary uppercase tracking-wider mb-6">Profile Initialization</h2>
+<div class="relative flex flex-col gap-6">
+<!-- Step 1: Done -->
+<div class="flex items-start gap-4 relative z-10">
+<div class="w-8 h-8 rounded-full bg-status-success/10 flex items-center justify-center flex-shrink-0 border border-status-success/20">
+<span class="material-symbols-outlined text-status-success" style="font-size: 18px;">check</span>
+</div>
+<div class="pt-1">
+<p class="font-label-md text-label-md text-on-surface">Basic Information</p>
+</div>
+</div>
+<!-- Step 2: Done -->
+<div class="flex items-start gap-4 relative z-10">
+<div class="w-8 h-8 rounded-full bg-status-success/10 flex items-center justify-center flex-shrink-0 border border-status-success/20">
+<span class="material-symbols-outlined text-status-success" style="font-size: 18px;">check</span>
+</div>
+<div class="pt-1">
+<p class="font-label-md text-label-md text-on-surface">Skill Baseline</p>
+</div>
+</div>
+<!-- Connecting Line for Completed Steps -->
+<div class="absolute left-4 top-4 bottom-[calc(100%-4rem)] w-px bg-status-success/30 -translate-x-1/2 z-0"></div>
+<!-- Step 3: Active -->
+<div class="flex items-start gap-4 relative z-10">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0 shadow-sm shadow-primary/20 ring-4 ring-primary-fixed">
+<span class="font-label-sm text-label-sm text-on-primary">3</span>
+</div>
+<div class="pt-1">
+<p class="font-label-md text-label-md text-primary font-semibold">Evidence Upload</p>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Connect your data sources.</p>
+</div>
+</div>
+<!-- Connecting Line to Active Step -->
+<div class="absolute left-4 top-[calc(4rem+16px)] bottom-12 w-px bg-border-subtle -translate-x-1/2 z-0"></div>
+<!-- Step 4: Pending -->
+<div class="flex items-start gap-4 relative z-10 opacity-50">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center flex-shrink-0 border border-border-subtle">
+<span class="font-label-sm text-label-sm text-secondary">4</span>
+</div>
+<div class="pt-1">
+<p class="font-label-md text-label-md text-secondary">Graph Generation</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Mobile Progress Indicator -->
+<div class="md:hidden flex items-center justify-between p-4 bg-surface-container-low">
+<span class="font-label-md text-label-md text-primary">Step 3 of 4: Evidence Upload</span>
+<div class="flex gap-1">
+<div class="h-1.5 w-6 rounded-full bg-status-success"></div>
+<div class="h-1.5 w-6 rounded-full bg-status-success"></div>
+<div class="h-1.5 w-6 rounded-full bg-primary"></div>
+<div class="h-1.5 w-6 rounded-full bg-border-subtle"></div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 overflow-y-auto bg-page relative">
+<div class="max-w-[720px] mx-auto px-6 py-8 md:px-12 md:py-16 flex flex-col gap-10">
+<!-- Header Section -->
+<header>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">3. Connect Your Evidence</h1>
+<p class="font-body-lg text-body-lg text-secondary mt-3 max-w-[600px]">
+                    To accurately seed your initial Skill Graph, we need data. Upload your resume and connect your technical profiles below. Our engine will parse your experience, projects, and problem-solving history.
+                </p>
+</header>
+<!-- Evidence Collection Zones -->
+<div class="flex flex-col gap-6">
+<!-- 1. Resume Upload -->
+<section class="bg-bg-surface border border-border-subtle rounded-xl p-6 transition-colors hover:border-primary-fixed-dim" id="resume-dropzone">
+<div class="flex items-start justify-between mb-4">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">description</span>
+                                Professional Resume
+                            </h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Extracts work history, education, and stated skills.</p>
+</div>
+</div>
+<div class="border-2 border-dashed border-border-subtle rounded-lg p-8 flex flex-col items-center justify-center text-center bg-page transition-colors duration-200" id="drop-area">
+<div class="w-12 h-12 rounded-full bg-surface-container-low flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-secondary text-2xl">upload_file</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-1">Drag and drop your resume here</p>
+<p class="font-body-sm text-body-sm text-secondary mb-4">Supports PDF, DOCX (Max 5MB)</p>
+<button class="px-4 py-2 bg-bg-surface border border-border-subtle rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container-lowest transition-colors shadow-sm inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                            Browse Files
+                        </button>
+</div>
+</section>
+<!-- 2. GitHub Integration -->
+<section class="bg-bg-surface border border-border-subtle rounded-xl p-6">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-[#24292F] flex items-center justify-center flex-shrink-0 text-white mt-1">
+<!-- GitHub Logo Placeholder using Material Icon for structural integrity -->
+<span class="material-symbols-outlined">code_blocks</span>
+</div>
+<div class="flex-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">GitHub Profile</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1 mb-4">We analyze your public repositories to extract programming languages, frameworks, and measure coding frequency to populate your practical implementation nodes.</p>
+<div class="flex flex-col sm:flex-row gap-3">
+<div class="relative flex-1">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-secondary" style="font-size: 18px;">link</span>
+</div>
+<input class="w-full pl-10 pr-4 py-2.5 bg-bg-surface border border-border-subtle rounded-lg font-body-sm text-body-sm text-on-surface placeholder-on-tertiary-container focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" placeholder="https://github.com/username" type="url"/>
+</div>
+<button class="px-4 py-2.5 bg-surface-container-low border border-border-subtle rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-variant transition-colors flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                    Connect GitHub
+                                </button>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. LeetCode Integration -->
+<section class="bg-bg-surface border border-border-subtle rounded-xl p-6">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-[#FFA116] flex items-center justify-center flex-shrink-0 text-white mt-1">
+<span class="material-symbols-outlined">terminal</span>
+</div>
+<div class="flex-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">LeetCode Profile</h3>
+<p class="font-body-sm text-body-sm text-secondary mt-1 mb-4">Connect your LeetCode to map your algorithmic problem-solving stats and contest ratings directly to your Data Structures and Algorithms capability metrics.</p>
+<div class="flex flex-col sm:flex-row gap-3">
+<div class="relative flex-1">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-secondary" style="font-size: 18px;">link</span>
+</div>
+<input class="w-full pl-10 pr-4 py-2.5 bg-bg-surface border border-border-subtle rounded-lg font-body-sm text-body-sm text-on-surface placeholder-on-tertiary-container focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-shadow" placeholder="https://leetcode.com/u/username" type="url"/>
+</div>
+<button class="px-4 py-2.5 bg-surface-container-low border border-border-subtle rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-variant transition-colors flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+                                    Connect LeetCode
+                                </button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Footer Actions -->
+<div class="mt-4 pt-6 border-t border-border-subtle flex items-center justify-between">
+<button class="px-4 py-2 text-secondary hover:text-on-surface font-label-md text-label-md transition-colors inline-flex items-center gap-2">
+<span class="material-symbols-outlined" style="font-size: 18px;">arrow_back</span>
+                    Back
+                </button>
+<button class="px-6 py-3 bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:bg-on-primary-fixed-variant transition-colors shadow-sm inline-flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bg-page">
+                    Finalize Profile
+                    <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+<script>
+        // Simple drag and drop visual interaction script
+        document.addEventListener('DOMContentLoaded', () => {
+            const dropArea = document.getElementById('drop-area');
+
+            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                dropArea.addEventListener(eventName, preventDefaults, false);
+            });
+
+            function preventDefaults (e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+
+            ['dragenter', 'dragover'].forEach(eventName => {
+                dropArea.addEventListener(eventName, highlight, false);
+            });
+
+            ['dragleave', 'drop'].forEach(eventName => {
+                dropArea.addEventListener(eventName, unhighlight, false);
+            });
+
+            function highlight(e) {
+                dropArea.classList.add('bg-surface-container-low', 'border-primary-fixed-dim');
+                dropArea.classList.remove('bg-page', 'border-border-subtle');
+            }
+
+            function unhighlight(e) {
+                dropArea.classList.remove('bg-surface-container-low', 'border-primary-fixed-dim');
+                dropArea.classList.add('bg-page', 'border-border-subtle');
+            }
+        });
+    </script>
+</body></html>

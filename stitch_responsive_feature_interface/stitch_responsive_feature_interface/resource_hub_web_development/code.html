@@ -1,0 +1,344 @@
+<!DOCTYPE html><html class="h-full" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Placement Mentor 2.0 - Resource Hub</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#9fa4a8",
+                    "status-success": "#10B981",
+                    "on-background": "#1c1b1b",
+                    "primary": "#1a146b",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#3e3c8f",
+                    "red-team": "#DC2626",
+                    "on-tertiary-fixed": "#171c1f",
+                    "bg-page": "#FAFAFA",
+                    "border-subtle": "#E2E8F0",
+                    "on-secondary-fixed-variant": "#38485d",
+                    "surface-tint": "#5654a8",
+                    "tertiary-fixed": "#dfe3e7",
+                    "on-secondary-fixed": "#0b1c30",
+                    "surface-container": "#f0eded",
+                    "status-error": "#EF4444",
+                    "secondary": "#505f76",
+                    "error-container": "#ffdad6",
+                    "on-error": "#ffffff",
+                    "blue-team": "#3B82F6",
+                    "on-surface": "#1c1b1b",
+                    "secondary-fixed-dim": "#b7c8e1",
+                    "inverse-primary": "#c3c0ff",
+                    "secondary-container": "#d0e1fb",
+                    "surface-container-high": "#eae7e7",
+                    "on-error-container": "#93000a",
+                    "tertiary-container": "#353a3d",
+                    "on-tertiary-fixed-variant": "#43474b",
+                    "tertiary-fixed-dim": "#c3c7cb",
+                    "surface-dim": "#dcd9d9",
+                    "on-primary-fixed": "#100563",
+                    "status-warning": "#F59E0B",
+                    "surface-variant": "#e5e2e1",
+                    "on-surface-variant": "#474651",
+                    "on-primary-container": "#9c9af4",
+                    "surface": "#fcf9f8",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-secondary-container": "#54647a",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#e2dfff",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed": "#d3e4fe",
+                    "surface-container-low": "#f6f3f2",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-tertiary": "#ffffff",
+                    "primary-container": "#312e81",
+                    "on-primary": "#ffffff",
+                    "surface-bright": "#fcf9f8",
+                    "background": "#fcf9f8",
+                    "tertiary": "#202528",
+                    "outline": "#777682",
+                    "inverse-surface": "#313030",
+                    "primary-fixed-dim": "#c3c0ff",
+                    "outline-variant": "#c8c5d3",
+                    "bg-surface": "#FFFFFF"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "32px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "sidebar-width": "260px",
+                    "panel-split": "50%",
+                    "unit": "4px"
+            },
+            "fontFamily": {
+                    "label-sm": ["JetBrains Mono"],
+                    "headline-sm": ["Hanken Grotesk"],
+                    "body-lg": ["Inter"],
+                    "code-block": ["JetBrains Mono"],
+                    "body-sm": ["Inter"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "label-md": ["JetBrains Mono"],
+                    "body-md": ["Inter"],
+                    "display-lg-mobile": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "code-block": ["14px", {"lineHeight": "22px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        }
+      }
+    </script>
+</head>
+<body class="bg-bg-page text-on-surface h-full flex overflow-hidden selection:bg-inverse-primary selection:text-primary-container">
+<!-- SideNavBar (Shared Component) -->
+<nav class="hidden md:flex bg-surface dark:bg-on-background w-[260px] h-screen fixed left-0 top-0 border-r border-border-subtle dark:border-outline-variant flex-col py-margin-desktop z-50">
+<!-- Header -->
+<div class="px-margin-desktop mb-8">
+<div class="flex items-center gap-3 mb-6">
+<img alt="User Profile Avatar" class="w-10 h-10 rounded-full object-cover border border-border-subtle" data-alt="A professional, high-resolution portrait photograph of a young tech professional with a confident, welcoming expression. They are wearing smart-casual clothing suitable for a modern office environment. The lighting is soft and flattering, with a bright, clean background that complements the light-mode UI aesthetic, featuring subtle hints of indigo and white." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA60WBYUMQLlTJA-okVoR2QVyVB8qHV_V2r3q5flHvL51IN9cJuvKCc237hewOF37d27_bMyusmAWsi-_ZdcxgywMqH0JdMm7rVzqtZTagkPa1i4SSbXcifdaTnzWIWaA2Sa3-tOjZ5AKZ5DVgaN7Lj4He0ye_rLXSwgR_kHoY2SU26n1aAk54CflLzUfV6FiWbrFjsfLRzsxaT6NXSSTYBWJwyvSpdvZ1Lm9qQR7lu7JtREYQ6_4T7">
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-primary dark:text-primary-fixed leading-tight">Placement Mentor</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ready for Google</p>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary font-label-md text-label-md py-2 px-4 rounded-lg hover:bg-primary-container transition-colors focus:ring-2 focus:ring-primary focus:outline-none focus:ring-offset-1 focus:ring-offset-bg-page">Start Practice</button>
+</div>
+<!-- Navigation Tabs -->
+<ul class="flex-1 px-4 space-y-1 overflow-y-auto">
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-low dark:hover:bg-tertiary-container transition-colors active:scale-[0.98] transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-body-md text-body-md">Dashboard</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-low dark:hover:bg-tertiary-container transition-colors active:scale-[0.98] transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="account_tree">account_tree</span>
+<span class="font-body-md text-body-md">Skill Graph</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-primary dark:text-primary-fixed font-bold border-r-2 border-primary dark:border-primary-fixed hover:bg-surface-container-low dark:hover:bg-tertiary-container transition-colors active:scale-[0.98] transition-transform bg-surface-container-low" href="#">
+<span class="material-symbols-outlined" data-icon="route" data-weight="fill" style="font-variation-settings: 'FILL' 1;">route</span>
+<span class="font-body-md text-body-md">Roadmap</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-low dark:hover:bg-tertiary-container transition-colors active:scale-[0.98] transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="code">code</span>
+<span class="font-body-md text-body-md">Workspace</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-low dark:hover:bg-tertiary-container transition-colors active:scale-[0.98] transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="mic">mic</span>
+<span class="font-body-md text-body-md">Interviews</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-low dark:hover:bg-tertiary-container transition-colors active:scale-[0.98] transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
+<span class="font-body-md text-body-md">Analytics</span>
+</a>
+</li>
+</ul>
+<!-- Footer Tabs -->
+<ul class="px-4 mt-auto pt-4 border-t border-border-subtle">
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-low dark:hover:bg-tertiary-container transition-colors active:scale-[0.98] transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-body-md text-body-md">Settings</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-low dark:hover:bg-tertiary-container transition-colors active:scale-[0.98] transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-body-md text-body-md">Support</span>
+</a>
+</li>
+</ul>
+</nav>
+<!-- TopAppBar (Shared Component) -->
+<header class="hidden md:flex bg-surface dark:bg-on-background fixed top-0 right-0 w-[calc(100%-260px)] h-16 border-b border-border-subtle dark:border-outline-variant items-center justify-between px-margin-desktop z-40">
+<div class="flex items-center gap-4 flex-1">
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">Placement Mentor 2.0</h1>
+<!-- Search Bar -->
+<div class="relative ml-8 w-96">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-lg">search</span>
+<input class="w-full bg-surface-container-low border border-border-subtle rounded-lg py-2 pl-10 pr-4 font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="Search resources, topics..." type="text">
+<div class="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1 opacity-50">
+<span class="material-symbols-outlined text-[16px]">keyboard_command_key</span>
+<span class="font-label-sm text-label-sm">K</span>
+</div>
+</div>
+</div>
+<!-- Trailing Actions -->
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-lg text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container-low transition-colors focus:outline-none focus:ring-2 focus:ring-primary">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 rounded-lg text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container-low transition-colors focus:outline-none focus:ring-2 focus:ring-primary">
+<span class="material-symbols-outlined" data-icon="command_key">find_replace</span>
+</button>
+<button class="p-2 rounded-lg text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim hover:bg-surface-container-low transition-colors focus:outline-none focus:ring-2 focus:ring-primary">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="md:ml-[260px] md:pt-16 w-full h-full flex flex-col md:flex-row bg-bg-page overflow-hidden">
+<!-- Primary Resource Area -->
+<div class="flex-1 h-full overflow-y-auto p-margin-mobile md:p-margin-desktop scroll-smooth">
+<!-- Page Header -->
+<div class="mb-8">
+<div class="flex items-center gap-2 text-on-surface-variant mb-2">
+<span class="font-label-md text-label-md">Roadmap</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="font-label-md text-label-md text-primary">Web Development Hub</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">Resource Hub</h1>
+<p class="font-body-lg text-body-lg text-secondary mt-2 max-w-3xl">Curated, high-signal materials aligned with your competency gaps. Organized for deep work and rapid assimilation.</p>
+</div>
+<!-- Competency Sections -->
+<div class="space-y-12 pb-12">
+<!-- React Competency -->
+<section>
+<div class="flex items-center justify-between mb-6 border-b border-border-subtle pb-2">
+<h2 class="font-headline-md text-headline-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-team">code_blocks</span>
+                            React Ecosystem
+                        </h2>
+<span class="bg-surface-container-high text-on-surface-variant px-3 py-1 rounded-full font-label-sm text-label-sm border border-border-subtle">4 Priority Items</span>
+</div>
+<!-- Bento Grid for React Resources -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Featured/High Priority Card -->
+<div class="md:col-span-2 bg-surface border border-status-warning/30 rounded-xl p-6 relative overflow-hidden group hover:border-status-warning/60 transition-colors">
+<div class="absolute top-0 right-0 w-32 h-32 bg-status-warning/5 rounded-bl-full -z-10 transition-transform group-hover:scale-110"></div>
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-2">
+<span class="bg-status-warning/10 text-status-warning px-2 py-1 rounded font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">smart_display</span> Video
+                                    </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 45m
+                                    </span>
+</div>
+<span class="bg-red-team/10 text-red-team border border-red-team/20 px-2 py-1 rounded font-label-sm text-label-sm">High Priority</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Advanced Hook Patterns: Beyond useEffect</h3>
+<p class="font-body-md text-body-md text-secondary mb-4 line-clamp-2">Mastering useReducer, custom hooks for complex state orchestration, and performance implications of dependency arrays.</p>
+<div class="bg-surface-container-low border border-border-subtle rounded-lg p-3 mb-4">
+<p class="font-label-sm text-label-sm text-primary flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] mt-0.5">track_changes</span>
+<strong>Why Recommended:</strong> Targeting weak React Hook mastery identified in your last 3 mock interviews.
+                                </p>
+</div>
+<button class="bg-primary text-on-primary font-label-md text-label-md py-2 px-4 rounded-lg hover:bg-primary-container transition-colors w-max">Watch Module</button>
+</div>
+<!-- Standard Doc Card -->
+<div class="bg-surface border border-border-subtle rounded-xl p-5 hover:border-outline-variant transition-colors flex flex-col">
+<div class="flex items-center gap-2 mb-3">
+<span class="bg-surface-container-high text-on-surface px-2 py-1 rounded font-label-sm text-label-sm flex items-center gap-1 border border-border-subtle">
+<span class="material-symbols-outlined text-[14px]">description</span> Docs
+                                </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 15m read
+                                </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 text-[18px]">React Fiber Architecture Deep Dive</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-4 flex-1">Understanding the reconciliation algorithm and how React schedules rendering work behind the scenes.</p>
+<a class="text-primary font-label-md text-label-md hover:underline flex items-center gap-1 mt-auto w-max" href="#">
+                                Read Documentation <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- System Design Competency -->
+<section>
+<div class="flex items-center justify-between mb-6 border-b border-border-subtle pb-2">
+<h2 class="font-headline-md text-headline-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-surface-tint">architecture</span>
+                            System Design
+                        </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Article Card -->
+<div class="bg-surface border border-border-subtle rounded-xl p-5 hover:border-outline-variant transition-colors">
+<div class="flex items-center gap-2 mb-3">
+<span class="bg-surface-container-high text-on-surface px-2 py-1 rounded font-label-sm text-label-sm flex items-center gap-1 border border-border-subtle">
+<span class="material-symbols-outlined text-[14px]">article</span> Article
+                                </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 20m read
+                                </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2 text-[18px]">Caching Strategies at Scale</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-4">Write-through vs. Write-behind, cache invalidation complexities, and implementing Redis in high-throughput environments.</p>
+<div class="bg-surface-container-low rounded p-2 mb-4 border border-border-subtle/50">
+<p class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">insights</span>
+                                    Fills knowledge gap from "Design Twitter" module.
+                                </p>
+</div>
+<a class="text-on-surface font-label-md text-label-md border border-border-subtle py-1.5 px-3 rounded hover:bg-surface-container-low transition-colors inline-block" href="#">Read Article</a>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Contextual Learning Sidebar -->
+<aside class="w-full md:w-[320px] bg-surface border-l border-border-subtle h-full overflow-y-auto hidden lg:block shrink-0">
+<div class="p-6">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">my_location</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Contextual Learning</h3>
+</div>
+<p class="font-body-sm text-body-sm text-secondary mb-6">These resources are dynamically curated based on your current active roadmap node: <strong>State Management Architecture</strong>.</p>
+<div class="space-y-4">
+<!-- Contextual Item 1 -->
+<div class="group border border-border-subtle rounded-lg p-3 hover:bg-surface-container-low transition-colors cursor-pointer relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary scale-y-0 group-hover:scale-y-100 transition-transform origin-top"></div>
+<h4 class="font-label-md text-label-md text-on-surface mb-1 pr-6">Redux Toolkit Essentials</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[12px] line-clamp-2">Standardizing Redux logic, reducing boilerplate, and RTK Query.</p>
+<span class="material-symbols-outlined absolute right-3 top-3 text-outline opacity-0 group-hover:opacity-100 transition-opacity text-[18px]">open_in_new</span>
+</div>
+<!-- Contextual Item 2 -->
+<div class="group border border-border-subtle rounded-lg p-3 hover:bg-surface-container-low transition-colors cursor-pointer relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary scale-y-0 group-hover:scale-y-100 transition-transform origin-top"></div>
+<h4 class="font-label-md text-label-md text-on-surface mb-1 pr-6">Zustand vs Redux vs Context</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-[12px] line-clamp-2">Architectural comparison and decision matrix for modern React applications.</p>
+<span class="material-symbols-outlined absolute right-3 top-3 text-outline opacity-0 group-hover:opacity-100 transition-opacity text-[18px]">open_in_new</span>
+</div>
+</div>
+</div>
+</aside>
+</main>
+</body></html>

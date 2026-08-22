@@ -1,0 +1,32 @@
+{
+  "BEHAVIORAL_LP": [
+    "Could you tell me about a time you showed ownership in a project?",
+    "How did you measure the success of that project?",
+    "What would you do differently if you had to do it again?",
+    "Can you share an instance where you disagreed with a team member?"
+  ],
+  "CS_CORE": [
+    "Can you explain the differences between processes and threads?",
+    "What are the ACID properties in a database?",
+    "How does a hash index differ from a B-Tree index?",
+    "Explain what happens when you type a URL into a browser."
+  ],
+  "LIVE_DSA": [
+    "What approach would you take to solve this problem?",
+    "Can you explain the time and space complexity of your solution?",
+    "How would your approach change if the input data was too large to fit in memory?",
+    "What edge cases did you consider in your implementation?"
+  ],
+  "RESUME_DEEP_DIVE": [
+    "Can you walk me through the architecture of your most impactful project?",
+    "What was the biggest technical challenge you faced there?",
+    "How did you optimize the system for better performance?",
+    "Can you quantify the impact of your contributions?"
+  ],
+  "HR_CULTURE_FIT": [
+    "What are your long-term career goals?",
+    "Why are you interested in joining our company?",
+    "What kind of team culture do you thrive in?",
+    "How do you usually handle feedback from your manager?"
+  ]
+}
